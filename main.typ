@@ -1183,7 +1183,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
         #colbreak()
         #image("figures/pc_consumption_1_c_2.png", width: 86%)
       ]
-    ]
+    ] #qqed
 + Consider an individual who lives from $0$ to $T,$ and whose lifetime utility is given by $ U(C_0, dots, C_T)=sum_(t=0)^T u(C(t)), $ where $u '>0$ and $u ''<0.$ The integer $T$ is greater than $2.$
 
   The individual's income is exogenously given by
@@ -1224,7 +1224,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
         display((t+1) dot.c (Y_0 + (g t)/2 - star(C)))\, quad & "if" t <= R\;,
         (T-t) star(C)\, quad & "else."
       )
-    $
+    $ #qqed
 + Consider an individual who lives for three periods.
 
   In period 1, his or her objective function is $ U_1(C_1, C_2, C_3) = ln C_1 + beta dot.c (ln C_2 + ln C_3), $ where $beta in (0, 1)$ is the discount factor. In period 2, it is $ U_2(C_2, C_3)=ln C_2 + beta ln (C_3). $
