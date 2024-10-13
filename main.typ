@@ -619,7 +619,7 @@ The individual's optimality condition equates the marginal rate of substitution 
 $
   U '(C_0) &= u '(C_0) + beta dot.c u '(C_1) dot.c (dif C_1)/(dif C_0)\
   & = 0 \
-  => quad u '(C_0) &= (1+r) dot.c beta dot.c u' (C_1).
+  ==> quad u '(C_0) &= (1+r) dot.c beta dot.c u' (C_1).
 $ <consumption_fisher_optimality_condition>
 Note that we have $display((dif C_1)/(dif C_0) = -(1+r))$ from @consumption_fisher_IBC.
 
@@ -652,15 +652,15 @@ If $dif U != 0,$ then the point $(star(C_0), star(C_1))$ will not be optimal. Th
 If the instantaneous utility function $u$ is the *Cobb-Douglas* utility function, then the optimal consumption path $(star(C_0), star(C_1))$ must satisfy equations @consumption_fisher_IBC and @consumption_fisher_optimality_condition. Hence, we should solve 
 $
   & cases(
-    display(star(C_0) + star(C_1)/(1+r) &= Y_0 + Y_1/(1+r))\
-    display(qquad quad 1/star(C_0) &= beta dot.c (1+r) dot.c 1/star(C_1))
+    display(star(C_0) + star(C_1)/(1+r) &= Y_0 + Y_1/(1+r))\;,
+    display(qquad quad 1/star(C_0) &= beta dot.c (1+r) dot.c 1/star(C_1))\,
   )\
-  => quad & cases(
-    display(star(C_0) + star(C_1)/(1+r) &= Y_0 + Y_1/(1+r))\
-    display(qquad quad star(C_1) &= beta dot.c (1+r) dot.c star(C_0))
+  ==> quad & cases(
+    display(star(C_0) + star(C_1)/(1+r) &= Y_0 + Y_1/(1+r))\;,
+    display(qquad quad star(C_1) &= beta dot.c (1+r) dot.c star(C_0))\,
   )\
-  => quad & cases(
-    display(qquad quad star(C_0) &= 1/(1+beta) dot.c (Y_0 + Y_1/(1+r))),
+  ==> quad & cases(
+    display(qquad quad star(C_0) &= 1/(1+beta) dot.c (Y_0 + Y_1/(1+r)))\;,
     display(qquad quad star(C_1) &= (beta dot.c (1+r))/(1+beta) dot.c (Y_0 + Y_1/(1+r))).
   )\
 $
@@ -668,15 +668,15 @@ $
 #newpar If the instantaneous utility function $u$ is the *constant intertemporal elasticity in substitution* utility function, then the optimal consumption path $(star(C_0), star(C_1))$ must satisfy equations @consumption_fisher_IBC and @consumption_fisher_optimality_condition. Hence, we should solve 
 $
   & cases(
-    display(star(C_0) + star(C_1)/(1+r) &= Y_0 + Y_1/(1+r))\
-    display(quad smallspace smallspace (star(C_0))^(-theta) &= beta dot.c (1+r) dot.c (star(C_1))^(-theta))
+    display(star(C_0) + star(C_1)/(1+r) &= Y_0 + Y_1/(1+r))\;,
+    display(quad smallspace smallspace (star(C_0))^(-theta) &= beta dot.c (1+r) dot.c (star(C_1))^(-theta))\,
   )\
-  => quad & cases(
-    display(star(C_0) + star(C_1)/(1+r) &= Y_0 + Y_1/(1+r))\
-    display(qquad quad star(C_0) &= (beta dot.c (1+r))^(-1/theta) dot.c star(C_1))
+  ==> quad & cases(
+    display(star(C_0) + star(C_1)/(1+r) &= Y_0 + Y_1/(1+r))\;,
+    display(qquad quad star(C_0) &= (beta dot.c (1+r))^(-1/theta) dot.c star(C_1))\,
   )\
-  => quad & cases(
-    display(qquad quad star(C_0) &= display(Y_0 + Y_1/(1+r))/display(1 + (beta dot.c (1+r))^(1/theta)/(1+r))),
+  ==> quad & cases(
+    display(qquad quad star(C_0) &= display(Y_0 + Y_1/(1+r))/display(1 + (beta dot.c (1+r))^(1/theta)/(1+r)))\;,
     display(qquad quad star(C_1) &= display((beta dot.c (1+r))^(1/theta) dot.c (Y_0 + Y_1/(1+r)))/display(1 + (beta dot.c (1+r))^(1/theta)/(1+r))).
   )\
 $
@@ -700,7 +700,7 @@ where $B$ stands for government's borrowing at period $0.$
 We combine the two equations for the government's budget constraints and have 
 $
   G_1 &= T_1 - (1+r) dot.c (G_0 - T_0)\
-  => quad G_0 + G_1/(1+r) &= T_0 + T_1/(1+r),
+  ==> quad G_0 + G_1/(1+r) &= T_0 + T_1/(1+r),
 $
 which is the government's intertemporal budget constraint.
 
@@ -835,8 +835,8 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
 + Consider the Solow growth model 
   $
     cases(
-      Y &= F(K, L)\,,
-      dot(K)&=s dot.c Y - delta K\,,
+      Y &= F(K, L)\;,
+      dot(K)&=s dot.c Y - delta K\;,
       g_L &= n\,
     )
   $
@@ -850,8 +850,8 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
       *Proof*. By the definition of $k,$ log-differentiating and simplifying yield 
       $
         quad k &= K/L\
-        => quad dot(k)/k &= dot(K)/K - dot(L)/L\
-        => quad dot(k) &= (s dot.c Y/K - delta) dot.c k \
+        ==> quad dot(k)/k &= dot(K)/K - dot(L)/L\
+        ==> quad dot(k) &= (s dot.c Y/K - delta) dot.c k \
         &= s dot.c Y/L - delta k \
         &=s dot.c f(k) - delta k. 
       $ #qqed
@@ -893,12 +893,12 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
       dot(K) &= I - delta K\
       &=s dot.c (Y-T) - delta K\
       &=s dot.c (Y- gamma L) - delta K\
-      => quad dot(K)/K &= s dot.c (y-gamma)/k-delta.
+      ==> quad dot(K)/K &= s dot.c (y-gamma)/k-delta.
     $ <eq_ps_solow_2_a_dynamics_capital> By the definition of $k,$ log-differentiating and plugging in @eq_ps_solow_2_a_dynamics_capital yield 
     $
       dot(k)/k &= dot(K)/K - dot(L)/L\
       &=s dot.c (y-gamma)/k-delta - n\
-      => quad dot(k) &= s dot.c (y - gamma) - (delta + n) dot.c k\
+      ==> quad dot(k) &= s dot.c (y - gamma) - (delta + n) dot.c k\
       &= s dot.c (f(k) - gamma) - (n + delta) dot.c k.
     $
     The steady state is when $dot(k)=0,$ i.e., $ s dot.c f(k) = s gamma + (n + delta) dot.c k. $ #qqed
@@ -928,7 +928,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
       $
         C&=(1-s)(Y-T)\
         &=(1-s)(Y-G)\
-        => quad c &= (1-s)(y-gamma).
+        ==> quad c &= (1-s)(y-gamma).
       $
       Thus, per-capita consumption sharply decreases in the short-run when the government increases its per-capita spending. Then it follows the transition path of $y(t)$ being a constant fraction of the disposable income per capita. The dynamics of $c$ is illustrated below.
       #figure(caption: none)[
@@ -971,24 +971,24 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
     *Solution*. We first find $g_A (t).$ Plugging @ps_endo_1_output in @ps_endo_1_side_effect, we have 
     $
       dot(A)(t) &= B dot.c (K(t))^alpha (A(t)L(t))^(1-alpha)\
-      => quad g_A (t) &= B dot.c (K(t) / A(t))^alpha (L(t))^(1-alpha)\
+      ==> quad g_A (t) &= B dot.c (K(t) / A(t))^alpha (L(t))^(1-alpha)\
       &= B dot.c (K(t) / A(t))^alpha.
     $ <ps_endo_1_a_g_A> We now find $g_K (t).$ Plugging @ps_endo_1_output in @ps_endo_1_capital_accumulation, we have 
     $
       dot(K)(t) &= s dot.c (K(t))^alpha (A(t)L(t))^(1-alpha) \
-      => quad g_K (t) &= s dot.c (K(t))^(alpha-1) (A(t)L(t))^(1-alpha)\
+      ==> quad g_K (t) &= s dot.c (K(t))^(alpha-1) (A(t)L(t))^(1-alpha)\
       &=s dot.c (A(t) / K(t))^(1-alpha).
     $ <ps_endo_1_a_g_K> #qqed
   + Sketch $dot(g_A)=0$ and $dot(g_K)=0$ lines in $(g_A, g_K)$ space.\
     *Solution*. From @ps_endo_1_a_g_A and @ps_endo_1_a_g_K, we log-differentiate and have 
     $ 
       (dot(g_A)(t)) / (g_A (t)) &= alpha dot.c (g_K (t) - g_A (t))\
-      => quad dot(g_A)(t) &= alpha dot.c (g_K (t) - g_A (t)) dot.c g_A (t)
+      ==> quad dot(g_A)(t) &= alpha dot.c (g_K (t) - g_A (t)) dot.c g_A (t)
     $
     and 
     $ 
       (dot(g_K)(t)) / (g_K (t)) &= (1-alpha) dot.c (g_A (t) - g_K (t))\
-      => quad dot(g_K)(t) &= (1-alpha) dot.c (g_A (t) - g_K (t)) dot.c g_K (t).
+      ==> quad dot(g_K)(t) &= (1-alpha) dot.c (g_A (t) - g_K (t)) dot.c g_K (t).
     $
     Hence, both $dot(g_A)=0$ and $dot(g_K)=0$ are the equation $g_K - g_A = 0.$ However, we have to note the tendencies of $dot(g_K)$ and $dot(g_A).$ For $dot(g_A)(t),$ if we fix a $g_A,$ the greater $g_K$ is, the greater $dot(g_A)(t)$ is; hence, above the line is $dot(g_A)>0,$ and below the line is $dot(g_A)<0.$ For $dot(g_K)(t),$ if we fix a $g_K,$ the greater $g_A$ is, the greater $dot(g_K)(t)$ is; hence, to the right of the line is $dot(g_A) > 0,$ and to the left of the line is $dot(g_A) < 0.$
     #figure(caption: [Phase diagram for $g_A$ and $g_K.$])[
@@ -999,7 +999,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
     $ 
       (g_K (t))/(g_A (t)) &= s/B dot.c (A(t) / K(t))^(1-alpha) dot.c (A(t) / K(t))^alpha\
       &= s/B dot.c ((g_A (t))/B)^(-1/alpha)\
-      => quad g_K (t) &= s dot.c (B / (g_A (t)))^(1/alpha - 1).
+      ==> quad g_K (t) &= s dot.c (B / (g_A (t)))^(1/alpha - 1).
     $ <ps_endo_g_k_by_g_A>
     Plugging the equilibrium, on the balanced growth path, $g_A = g_K=star(g)$ into @ps_endo_g_k_by_g_A, we obtain $ star(g)=s^alpha B^(1-alpha). $ To find the growth rate of output on the balanced growth path, log-differentiating @ps_endo_1_output yields $ g_Y = alpha g_K + (1-alpha)g_A. $ Since we are focusing on the balanced growth path, we plug $g_A = g_K=star(g)$ in and have $ g_Y=star(g). $
     #figure()[
@@ -1018,9 +1018,9 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
   Consider a model where productivity growth is an externality caused by capital accumulation. With usual notations, consider the following model
   $
     cases(
-      Y &= A K^alpha L^(1-alpha)\,,
-      A &= B K^ phi.alt\,,
-      dot(K) &= s Y\,,
+      Y &= A K^alpha L^(1-alpha)\;,
+      A &= B K^ phi.alt\;,
+      dot(K) &= s Y\;,
       g_L &= n\,,
     )
   $
@@ -1029,7 +1029,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
     *Solution*. We plug $Y = A K^alpha L^(1-alpha)$ and $A = B K^ phi.alt$ into $dot(K) = s Y,$ having 
     $
       dot(K) &= s B K^phi.alt K^alpha L^(1-alpha)\
-      => quad g_K &= s B L^(1-alpha)K^(alpha+ phi.alt - 1).
+      ==> quad g_K &= s B L^(1-alpha)K^(alpha+ phi.alt - 1).
     $ #qqed
   + Derive an expression of $g_Y$ depending on $g_K$ and $g_L.$ What inequality mush hold so that there exists a balanced growth path, i.e., a regime where $g_Y$ and $g_K$ are strictly positive constants? How does $g_y$ vary with $n?$\
     *Solution*. We log-differentiate the first assumption and have 
@@ -1043,7 +1043,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
     *Solution*. We plug $Y = A K^alpha L^(1-alpha)$ and $display(A = B dot.c (K/L)^phi.alt)$ into $dot(K) = s Y,$ having 
     $
       dot(K) &= s B dot.c (K/L)^phi.alt K^alpha L^(1-alpha)\
-      => quad g_K &= s B L^(1 - phi.alt - alpha)K^(alpha+ phi.alt - 1)\
+      ==> quad g_K &= s B L^(1 - phi.alt - alpha)K^(alpha+ phi.alt - 1)\
       &= s B dot.c (L/K)^(1-phi.alt-alpha).
     $ The balanced growth path requires $g_K$ to be a constant. Hence, either the variable $display(L/K)$ is constant or $1-phi.alt-alpha = 0.$ For the first case, $display(L/K)$ being constant implies the growth rate of $display(L/K)$ is $0,$ which means $g_K = g_L = n;$ there is no growth in output $y$ per capita. For the second case, $phi.alt - alpha = 1$ implies $g_K = g_Y = s B;$ the model has a balanced growth path where $g_y = s B - n.$
 
@@ -1051,10 +1051,10 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
 + Consider the continuous-time growth model with physical capital $K_t$ and human capital $H_t$ 
   $
     cases(
-      Y_t &= ((1-a_K)K_t)^alpha ((1-a_H)H_t)^(1-alpha)\,,
-      dot(K)_t &= s Y_t-delta_K K_t\,,
-      dot(H)_t &= (a_K K_t)^gamma (a_H H_t)^phi.alt (A_t L_t)^(1-gamma-phi.alt) -delta_H H_t\,,
-      dot(L)_t &= n L_t\,,
+      Y_t &= ((1-a_K)K_t)^alpha ((1-a_H)H_t)^(1-alpha)\;,
+      dot(K)_t &= s Y_t-delta_K K_t\;,
+      dot(H)_t &= (a_K K_t)^gamma (a_H H_t)^phi.alt (A_t L_t)^(1-gamma-phi.alt) -delta_H H_t\;,
+      dot(L)_t &= n L_t\;,
       dot(A)_t &= g A_t\,,
     )
   $
@@ -1072,12 +1072,12 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
       &= s dot.c Y/K - delta_K - g - n\
       &= s dot.c (1-a_K)^alpha ((1-a_H)H/K)^(1-alpha) - delta_K - g - n\
       &= s dot.c (1-a_K)^alpha (1-a_H)^(1-alpha) h^(1-alpha) k^(alpha-1) - delta_K - g - n\
-      => quad dot(k) &=s dot.c ((1-a_K)k)^alpha ((1-a_H)h)^(1-alpha) - (delta_K + g + n) k
+      ==> quad dot(k) &=s dot.c ((1-a_K)k)^alpha ((1-a_H)h)^(1-alpha) - (delta_K + g + n) k
     $ <ps_endo_3_a_k_dot> and 
     $
       dot(h)/h &= g_H - g_A - g_L\
       &= (a_K K)^gamma power(a_H, phi.alt)power(H,phi.alt-1) (A L)^(1-gamma-phi.alt) -delta_H - g - n\
-      => quad dot(h) &= (a_K k)^gamma (a_H h)^phi.alt - (delta_H + g + n) h.
+      ==> quad dot(h) &= (a_K k)^gamma (a_H h)^phi.alt - (delta_H + g + n) h.
     $ <ps_endo_3_a_h_dot> #qqed
   + Derive an equation describing the set of combinations of $k$ and $h$ such that $dot(k)=0.$ Sketch it in the $(k, h)$ space. Do the same for $dot(h)=0$ on the same graph.\
     *Solution*. We need some patience and algebra sense to answer this question. We will use more subscripts with calligraphic capital letters to represent constants to avoid visual confusion. We first deal with $dot(k)=0.$ In this case, we have 
@@ -1195,11 +1195,36 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
   $
   where $g > 0.$ The retirement age, $R >= 1,$ satisfies $R + 1 < T.$ The interest rate is zero, the individual has no initial wealth, and there is no uncertainty.
   + What is the individual's lifetime budget constraint?\
-    *Solution*. 
+    *Solution*. We have to make the lifetime consumption equal life time income. Hence, the budget constraint is 
+    $
+      sum_(t=0)^R Y_0 + g t &= sum_(t=0)^T C_t\
+      <==> quad (R+1) Y_0 + g dot.c (R dot.c (R+1))/2 &= sum_(t=0)^T C_t.
+    $ <pc_consumption_2_bc> #qqed
   + Prove that the individual wishes constant $C(t)$ for all dates $t in {0, dots , T}.$\
-    *Proof*.
+    *Proof*. Without loss of generality, assume $C(t_1) > C(t_2)$ for some $t_1 != t_2$ on the consumption path. Since $u$ is strictly concave, we will have 
+    $
+      u((C(t_1)+C(t_2))/2) > display(u(C(t_1))+u(C(t_2)))/2.
+    $
+    Hence, there is one more consumption bundle $(display((C(t_1)+C(t_2))/2), display((C(t_1)+C(t_2))/2))$ on $t_1$ and $t_2$ that yields a greater utility, a contradiction. Therefore, the individual wishes constant cosumption for all dates. #qqed
   + What is the path of the individual's wealth as a function of $t?$\
-    *Solution*.
+    *Solution*. From @pc_consumption_2_bc, we know that the constant consumption 
+    $
+      star(C) = (R+1)/(T+1) dot.c (Y_0 + (g R)/2).
+    $
+    Hence, we simply have 
+    $
+      W(t) = cases(
+        display(sum_(tau = 0)^t (Y_0 + g tau) - (t + 1) star(C))\, quad & "if" t <= R\;,
+        W(R) - (t + 1) star(C)\, quad & "else."
+      )
+    $
+    Since $W(R)=display((R+1) Y_0 + g dot.c (R dot.c (R+1))/2)$ and $star(C) = display((R+1)/(T+1) dot.c (Y_0 + (g R)/2)),$ we can further simplify $W(t)$ and have 
+    $
+      W(t) = cases(
+        display((t+1) dot.c (Y_0 + (g t)/2 - star(C)))\, quad & "if" t <= R\;,
+        (T-t) star(C)\, quad & "else."
+      )
+    $
 + Consider an individual who lives for three periods.
 
   In period 1, his or her objective function is $ U_1(C_1, C_2, C_3) = ln C_1 + beta dot.c (ln C_2 + ln C_3), $ where $beta in (0, 1)$ is the discount factor. In period 2, it is $ U_2(C_2, C_3)=ln C_2 + beta ln (C_3). $
@@ -1212,17 +1237,17 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
       *Solution*. We want to maximize 
       $
         U_1(C_1, C_2, C_3)
-      $ <pc_consumption_3_a_maximizee>
+      $ <pc_consumption_3_a_i_maximizee>
       under the budget constraint
       $
         C_1 + C_2 + C_3 = W.
-      $ <pc_consumption_3_a_bc>
-      Hence, we substitude $C_3$ by $W-C_1-C_2$ in @pc_consumption_3_a_maximizee and have 
+      $ <pc_consumption_3_a_i_bc>
+      Hence, we substitude $C_3$ by $W-C_1-C_2$ in @pc_consumption_3_a_i_maximizee and have 
       $
         U_1(C_1, C_2, C_3) &= U_1(C_1, C_2, W-C_1-C_2)\
         &= ln C_1 + beta dot.c ln C_2 + beta dot.c ln (W-C_1-C_2).
       $
-      Setting two partial derivatives of $U_1$ (with respect to $C_1$ and to $C_2$)
+      We first differentiate $U_1$ with respect to $C_1$ and to $C_2,$ we have
       $
         pdiff(U_1, C_1)(C_1, C_2, C_3) &= 1/C_1 - beta/(W-C_1-C_2)
       $
@@ -1233,22 +1258,94 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
       Setting the partial derivatives to zero, we solve the system 
       $
         & cases(
-          display(1/C_1 - beta/(W-C_1-C_2) &= 0),
-          display(beta/C_2 - beta/(W-C_1-C_2) &= 0)
+          display(1/C_1 - beta/(W-C_1-C_2) &= 0)\,,
+          display(beta/C_2 - beta/(W-C_1-C_2) &= 0)\;
         )\
-        => quad & cases(
-          beta C_1 &= W-C_1-C_2,
-          #hide($beta$) C_2 &= W-C_1-C_2
+        ==> quad & cases(
+          beta C_1 &= W-C_1-C_2\,,
+          #hide($beta$) C_2 &= W-C_1-C_2\;
         )\
-        => quad & cases(
-          C_1 &= display(W / (1+2 beta)),
-          C_2 &= display((beta W) / (1+2 beta)),
-          C_3 &= display((beta W) / (1+2 beta))
+        ==> quad & cases(
+          star(C_1) &= display(W / (1+2 beta))\,,
+          star(C_2) &= display((beta W) / (1+2 beta))\,,
+          star(C_3) &= display((beta W) / (1+2 beta)).
         )
-      $
+      $ #qqed
     + (_No commitment, naïvete_) The individual chooses $C_1$ in period 1 to maximize the period-1 objective function, thinking he or she will also choose $C_2$ to maximize this objective function. In fact, however, the individual chooses $C_2$ to maximize the period-2 objective function.\
-      *Solution*.
+      *Solution*. Let $tilde(C_1)$ be the choice of the individual in period 1, which should be considered a constant. We now want to maximize 
+      $
+        U_2(C_2, C_3)
+      $ <pc_consumption_3_a_ii_maximizee>
+      under the budget constraint
+      $
+        tilde(C_1) + C_2 + C_3 = W.
+      $ <pc_consumption_3_a_ii_bc>
+      Hence, we substitude $C_3$ by $W-tilde(C_1)-C_2$ in @pc_consumption_3_a_ii_maximizee and have 
+      $
+        U_2(C_2, C_3) &= U_2(C_2, W-tilde(C_1)-C_2)\
+        &= ln tilde(C_2) + beta dot.c ln (W-tilde(C_1)-C_2).
+      $
+      We first differentiate $U_1$ with respect to $C_2,$ we have
+      $
+        pdiff(U_1, C_2)(C_2, C_3) &= 1/C_2 - beta/(W-tilde(C_1)-C_2).
+      $
+      Setting the partial derivative to zero, we have 
+      $
+        1/C_2 - beta/(W-tilde(C_1)-C_2) &= 0\
+        ==> qquad qquad qquad quad beta C_2 &= W - tilde(C_1) - C_2\
+        ==> qquad qquad qquad quad #hide($beta$) C_2 &= (W-tilde(C_1))/(1 + beta).
+      $ 
+      Thus, $C_3 = display((beta dot.c (W - tilde(C_1)))/(1+beta))$ by @pc_consumption_3_a_ii_bc. In period 1, the individual chooses $C_1$ just as she did under commitment since she (wrongly) believes she will choose $C_2$ in the same way as under commitment. Thus, we have $ tilde(C_1) = star(C_1), $ where $star(C_1)$ is the one in the last question. Therefore, 
+      $
+        cases(
+          star(C_1) &= display(W / (1+2 beta))\,,
+          star(C_2) &= display((2 beta W) / ((1+beta)(1+2 beta)))\,,
+          star(C_3) &= display((2 beta^2 W) / ((1+beta)(1+2 beta))).
+        )
+      $ #qqed
     + (_No commitment, sophistication_) The individual chooses $C_1$ in period 1 to maximize the period-1 objective function, realizing that he or she will choose $C_2$ in period 2 to maximize the period-2 objective function.\
-      *Solution*.
+      *Solution*. From the previous question, we know that if one is maximizing the period-2 objective function, we must have 
+      $
+        star(C_2)(C_1) = display((W - C_1)/(1 + beta)) quad "and" quad star(C_3)(C_1) = display((beta dot.c (W - C_1))/(1+beta)).
+      $ <pc_consumption_3_a_iii_relation>
+      Hence, by @pc_consumption_3_a_iii_relation, we only need to maximize
+      $
+        &#hide($=$)U_1(C_1, star(C_2)(C_1), star(C_3)(C_1))\
+        &= ln C_1 + beta dot.c (ln star(C_2)(C_1)) + beta dot.c (ln star(C_3)(C_1))\
+        &= ln C_1 + beta dot.c (ln (W - C_1)/(1 + beta)) + beta dot.c (ln (beta dot.c (W - C_1))/(1+beta))\
+        &= ln C_1 + beta ln (W-C_1) - beta ln (1+beta) + beta ln (W-C_1) + beta ln beta/(1+beta).
+      $ <pc_consumption_3_a_iii_maximizee>
+      Set the partial derivative of @pc_consumption_3_a_iii_maximizee with respect to $C_1$ to be zero, we have 
+      $
+        1/C_1 - beta/(W-C_1) - beta/(W-C_1) &= 0\
+        W-C_1 - 2beta dot.c C_1 &= 0\
+        star(C_1) &= W/(1+2 beta).
+      $
+      We can hence see that the three-tuple $(star(C_1), star(C_2), star(C_3))$ is the same as the one in the previous question. #qqed
   + Use your answers to parts (a) and (b) to explain in what sense the individuals' preferences are time-inconsistent. Explain intuitively why sophistication does not produce different behavior than naïvete.\
-    *Solution*.
+    *Solution*. The individual's preferences are time-inconsistent because the optimal choice of period-2 consumption that is made in the first period is no longer the optimal choice once period 2 actually arrives.
+
+    This is illustrated by the fact that if the individual does not commit to period-2 consumption in the first period, then when period 2 arrives one chooses
+    $
+      tilde(C_2) &= (2 beta W) / ((1+beta)(1+2 beta))\
+      &= 2/(1+beta) dot.c (beta W)/(1+2beta)\
+      &> (beta W)/(1+2beta)\
+      &= star(C_2),
+    $
+    where the inequality holds because
+    $
+      2/(1+beta)&>2/(1+1)\ &=1
+    $
+    with the discount factor $beta in (0, 1).$
+
+    From the period-1 objective function we can see that in the first period the individual is indifferent between period-2 and period-3 consumption; they are both discounted by the discount factor $beta < 1.$
+
+    But when period 2 actually arrives, we can see from the period-2 objective function that the individual then prefers period-2 consumption over period-3 consumption: his marginal rate of substitution proportionately increases by a factor $display(1/beta).$
+
+    The key to the result that sophistication does not affect behaviour is the assumption of log utility.
+
+    Think of a sophisticated individual contemplating a marginal decrease in $C_1$, relative to what a naïve individual would do. The naïve individual believes she will allocate the increase in saving equally between $C_2$ and $C_3$ and that marginal utility will be the same in the two future periods. The sophisticated individual realises that she will, in fact, devote most of the increase in saving to $C_2$ and that $C_2$ will be high. The individual does not particularly value $C_2$ thus marginal utility in period 2 will be low. This tends to make the increase in saving look relatively less attractive to the sophisticated individual than to the naïve individual.
+
+    But the sophisticated individual also realises that some of the increase in saving will be devoted to $C_3$, which will be low. The individual values $C_3$ as much as $C_2$ and thus marginal utility will be high in period 3. This tends to make the increase in saving look relatively more attractive to the sophisticated individual than to the naïve individual.
+
+    With log utility, these two effects exactly offset each other. With a general utility function, a sophisticated individual can consume either more or less in the first period than a naïve individual. #qqed
