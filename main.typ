@@ -1205,7 +1205,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
     $
       u((C(t_1)+C(t_2))/2) > display(u(C(t_1))+u(C(t_2)))/2.
     $
-    Hence, there is one more consumption bundle $(display((C(t_1)+C(t_2))/2), display((C(t_1)+C(t_2))/2))$ on $t_1$ and $t_2$ that yields a greater utility, a contradiction. Therefore, the individual wishes constant cosumption for all dates. #qqed
+    Hence, there is one more consumption bundle $(display((C(t_1)+C(t_2))/2), display((C(t_1)+C(t_2))/2))$ on $t_1$ and $t_2$ that yields a greater utility, a contradiction. Therefore, the individual wishes constant consumption for all dates. #qqed
   + What is the path of the individual's wealth as a function of $t?$\
     *Solution*. From @pc_consumption_2_bc, we know that the constant consumption 
     $
@@ -1242,7 +1242,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
       $
         C_1 + C_2 + C_3 = W.
       $ <pc_consumption_3_a_i_bc>
-      Hence, we substitude $C_3$ by $W-C_1-C_2$ in @pc_consumption_3_a_i_maximizee and have 
+      Hence, we substitute $C_3$ by $W-C_1-C_2$ in @pc_consumption_3_a_i_maximizee and have 
       $
         U_1(C_1, C_2, C_3) &= U_1(C_1, C_2, W-C_1-C_2)\
         &= ln C_1 + beta dot.c ln C_2 + beta dot.c ln (W-C_1-C_2).
@@ -1342,10 +1342,10 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
 
     But when period 2 actually arrives, we can see from the period-2 objective function that the individual then prefers period-2 consumption over period-3 consumption: his marginal rate of substitution proportionately increases by a factor $display(1/beta).$
 
-    The key to the result that sophistication does not affect behaviour is the assumption of log utility.
+    The key to the result that sophistication does not affect behavior is the assumption of log utility.
 
-    Think of a sophisticated individual contemplating a marginal decrease in $C_1$, relative to what a naïve individual would do. The naïve individual believes she will allocate the increase in saving equally between $C_2$ and $C_3$ and that marginal utility will be the same in the two future periods. The sophisticated individual realises that she will, in fact, devote most of the increase in saving to $C_2$ and that $C_2$ will be high. The individual does not particularly value $C_2$ thus marginal utility in period 2 will be low. This tends to make the increase in saving look relatively less attractive to the sophisticated individual than to the naïve individual.
+    Think of a sophisticated individual contemplating a marginal decrease in $C_1$, relative to what a naïve individual would do. The naïve individual believes she will allocate the increase in saving equally between $C_2$ and $C_3$ and that marginal utility will be the same in the two future periods. The sophisticated individual realizes that she will, in fact, devote most of the increase in saving to $C_2$ and that $C_2$ will be high. The individual does not particularly value $C_2$ thus marginal utility in period 2 will be low. This tends to make the increase in saving look relatively less attractive to the sophisticated individual than to the naïve individual.
 
-    But the sophisticated individual also realises that some of the increase in saving will be devoted to $C_3$, which will be low. The individual values $C_3$ as much as $C_2$ and thus marginal utility will be high in period 3. This tends to make the increase in saving look relatively more attractive to the sophisticated individual than to the naïve individual.
+    But the sophisticated individual also realizes that some of the increase in saving will be devoted to $C_3$, which will be low. The individual values $C_3$ as much as $C_2$ and thus marginal utility will be high in period 3. This tends to make the increase in saving look relatively more attractive to the sophisticated individual than to the naïve individual.
 
     With log utility, these two effects exactly offset each other. With a general utility function, a sophisticated individual can consume either more or less in the first period than a naïve individual. #qqed
