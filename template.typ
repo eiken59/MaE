@@ -394,7 +394,7 @@
     }
   }
   set figure(numbering: num =>
-    numbering("A.1.1", 
+    numbering("1.1.1", 
       counter(heading).get().at(0), 
       if counter(heading).get().len() == 1 {0} 
       else {counter(heading).get().at(1)},

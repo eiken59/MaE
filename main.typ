@@ -836,7 +836,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
   $
     cases(
       Y &= F(K, L)\;,
-      dot(K)&=s dot.c Y - delta K\;,
+      dot(K)&=s Y - delta K\;,
       g_L &= n\,
     )
   $
@@ -864,7 +864,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
       ] #qqed
   + Assume that $f(k) = sqrt(k),$ $delta = 0.15,$ and $s=0.3.$
     + Find the steady-state capital stock $k_s$ per worker.\
-      *Solution*. The expression in the steady state is that $ s dot.c f(k) = delta dot.c k. $ Hence, we simply have 
+      *Solution*. The expression in the steady state is that $ s dot.c f(k) = delta k. $ Hence, we simply have 
       $
         0.3 dot.c sqrt(k_s) &= 0.15 k_s \
         k_s &= 4.
