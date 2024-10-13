@@ -56,7 +56,7 @@ Below are the conditions that $F:RR^2 -> RR$ needs to satisfy.
 
 The most comprehensive production function is the constant elasticity of substitution production function (CES production function), 
 $
-  Y(t)=(alpha dot.c (K(t))^((sigma-1)/sigma)+(1-alpha)(A(t) L(t))^((sigma-1)/sigma))^(sigma/(sigma-1)).
+  Y(t)=(alpha dot.c (K(t))^((sigma-1)/sigma)+(1-alpha)(A(t) L(t))^((sigma-1)/sigma)) ^(sigma/(sigma-1)).
 $ <solow_ces>
 
 #newpar We can derive many other productions functions via the constant elasticity of substitution production function. In @solow_ces, if we take $sigma -> 1,$ we will get the Cobb-Douglas production function, 
