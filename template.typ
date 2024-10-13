@@ -359,13 +359,13 @@
 }
 
 #let appendix(content) = {
-  set heading(numbering: "A.1.1 ", bookmarked: true)
+  set heading(numbering: "1.1.1 ", bookmarked: true)
   show math.equation: it => {
     if it.fields().keys().contains("label") {
       math.equation(
         block: true,
         numbering: num => 
-          numbering("(A.1.1)",
+          numbering("(1.1.1)",
             counter(heading).get().at(0), 
             if counter(heading).get().len() == 1 {0} 
             else {counter(heading).get().at(1)},
@@ -384,7 +384,7 @@
       link(
         el.location(), 
         numbering(
-          "(A.1.1)",
+          "(1.1.1)",
           h.at(0), if h.len() == 1 {0} else {h.at(1)} , counter(math.equation).at(el.location()).at(0) + 1,
         )
       )
@@ -401,7 +401,7 @@
       num
     )
   )
-  counter(heading).update(0)
+  // counter(heading).update(0)
   // pagebreak()
 
   content

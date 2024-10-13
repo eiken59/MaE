@@ -912,7 +912,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
     + The growth rate of capital.\
       *Solution*. An increase in $gamma$ lowers capital per worker and output per worker in the (new) steady state. When the economy reaches its new steady state, the growth rates of aggregate output, investment and consumption will equal the growth rate in population $n,$ the growth rate of the aggregates in the previous steady state.
 
-      Since government in our example takes away from the public investable resources and doesn’t invest itself, a higher level of government consumption will lead to lower values of capital per worker, output per worker and consumption per worker in the steady state.
+      Since government in our example takes away from the public investable resources and doesn't invest itself, a higher level of government consumption will lead to lower values of capital per worker, output per worker and consumption per worker in the steady state.
 
       The growth of $K$ drops, but as the economy moves to the new steady state with lower $k,$ it gradually moves back to $n.$ The dynamics of $g_K$ is illustrated below.
       #figure()[
@@ -1143,3 +1143,112 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
     pdiff(U, C_1)(C_1, C_2) limits(-->)^(C_1->0) infinity doub "for all" doub C_2>0 quad "and" quad pdiff(U, C_2)(C_1, C_2) limits(-->)^(C_2->0) infinity doub "for all" doub C_1>0.
   $
   The individual maximizes $U$ under the intertemporal budget constraint.
+  + Write down an equation for the individual's life-time budget constraint (i.e. the $(C_1, C_2)$ that the individual can afford). Draw a diagram illustrating how the optimal consumption plan is determined.\
+    *Solution*. By @consumption_IBC, the individual's lifetime budget constraint is 
+    $
+      C_1 + C_2 / (1+r) = Y_1 + Y_2 / (1+r).
+    $ <pc_consumption_1_a_bc>
+    The optimal consumption bundle $(C_1, C_2)$ is determined by maximizing the utility function $U$ such that $U(C_1, C_2)$ attains the maximum under the budget constraint. The optimal consumption bundle $(C_1, C_2)$ is the point where is @pc_consumption_1_a_bc is the tangent to $U(C_1, C_2)=U_0.$
+    #figure()[
+      #image("figures/pc_consumption_1_a.png", width: 43%)
+    ]
+    #qqed
+  + Consider that the real interest rate rises. How does it affect the life-time budget constraint? Would a saver ever find it rational to start borrowing when interest rates rise?\
+    *Solution*. Since $display(Y_1 + Y_2 / (1+r))$ is constant, we can simplify the @pc_consumption_1_a_bc to 
+    $
+      C_2 = -(1+r)C_1 + (1+r)Y_1 + Y_2.
+    $
+    Hence, if $r$ rises, the slope of @pc_consumption_1_a_bc will be smaller, i.e., the line will be steeper and pivot clockwise around the endowment point $(Y_1, Y_2).$
+
+    After the rise in the interest rate, it is impossible for a rational saver to be a borrower since the bundles were available before the rise in the interest rate from $r$ to $r ',$ but they (illustrated in the following figure with yellow) were not chosen by the consumer.
+    #figure()[
+      #image("figures/pc_consumption_1_b.png", width: 43%)
+    ]
+    #qqed
+  + Could a saver respond to a rise in $r$ by saving *less*? Explain.\
+    *Solution*. Yes. A saver can respond to a rase in $r$ by saving less. We should answer by considering the _substitution effect_ (can be seen on a unique indifference curve) and the _income effect_ (can be seen between two parallel budget constraint). 
+    
+    The substitution effect is defined as the response to the new interest rate, after hypothetically giving (or taking away) an amount of income that allows the individual just to afford a consumption point on the original indifference curve. The substitution effect is found by locating the point on the original indifference curve where the gradient is equal to the new gradient of the budget constraint. Since the budget constraint becomes steeper owing to the higher interest rate, the substitution effect implies a movement up and to the left the indifference curve, which means a reduction in current consumption. Intuitively, high interest rates make current consumption relatively more expensive than future consumption by raising the return to lending, thus encouraging saving and discouraging the current spending.
+
+    The income effect is defined as the response to removing the hypothetical increase or decrease of income that was used to calculate the substitution effect. Thus, by definition, the sum of the income and substitution effects is equal to the overall response to the change in interest rates. The nature of the income effect depends on whether the individual was initially a borrower or a saver. In this question, the individual is a saver, so the initial consumption point is to the left of the endowment point.
+
+    As a result of the higher interest rate, the budget constraint pivots clockwise around the endowment point. This shows that there must be a hypothetical decrease in income to calculate the substitution effect. This corresponds to the dashed budget line with the same gradient as the new budget line, but in a lower position that allows a consumption point on the original indifference curve to be just affordable.
+
+    Calculating the income effect means obtaining the effect of removing this hypothetical decrease in income, that is, the effect of the parallel shift of the budget constraint from the dashed line to the one passing through the endowment point. This is an upward shift, and given the assumption that consumption is a normal good, the response of current consumption to this shift is positive.
+
+    With a positive income effect and a negative substitution effect, the overall response of current consumption $C_1$ (and thus saving $S = Y_1-C_1$) is ambiguous. When the income effect dominates, an increase in $r$ leads to a reduction in savings; when the substitution dominates, an increase in $r$ leads to a rise in savings.
+    #figure()[
+      #columns(2)[
+        #image("figures/pc_consumption_1_c_1.png", width: 86%)
+        #colbreak()
+        #image("figures/pc_consumption_1_c_2.png", width: 86%)
+      ]
+    ]
++ Consider an individual who lives from $0$ to $T,$ and whose lifetime utility is given by $ U(C_0, dots, C_T)=sum_(t=0)^T u(C(t)), $ where $u '>0$ and $u ''<0.$ The integer $T$ is greater than $2.$
+
+  The individual's income is exogenously given by
+  $
+    Y(t) = cases(
+      Y_0 + g t\, quad &"if" doub t=0\, dots\, R\;,
+      0\, &"if" doub t=R+1\, dots\, T\,
+    )
+  $
+  where $g > 0.$ The retirement age, $R >= 1,$ satisfies $R + 1 < T.$ The interest rate is zero, the individual has no initial wealth, and there is no uncertainty.
+  + What is the individual's lifetime budget constraint?\
+    *Solution*. 
+  + Prove that the individual wishes constant $C(t)$ for all dates $t in {0, dots , T}.$\
+    *Proof*.
+  + What is the path of the individual's wealth as a function of $t?$\
+    *Solution*.
++ Consider an individual who lives for three periods.
+
+  In period 1, his or her objective function is $ U_1(C_1, C_2, C_3) = ln C_1 + beta dot.c (ln C_2 + ln C_3), $ where $beta in (0, 1)$ is the discount factor. In period 2, it is $ U_2(C_2, C_3)=ln C_2 + beta ln (C_3). $
+
+  #newpar Since the individual's period-$3$ choice problem is trivial (one should consume whatever is remaining), the period-$3$ objective function is irrelevant.
+
+  The individual has initial wealth $W>0$ and faces a real interest rate $r=0.$
+  + Find the values of $C_1,$ $C_2,$ and $C_3$ under the following assumptions about how they are determined.
+    + (_Commitment_) The individual chooses $C_1,$ $C_2,$ and $C_3$ in period 1.\
+      *Solution*. We want to maximize 
+      $
+        U_1(C_1, C_2, C_3)
+      $ <pc_consumption_3_a_maximizee>
+      under the budget constraint
+      $
+        C_1 + C_2 + C_3 = W.
+      $ <pc_consumption_3_a_bc>
+      Hence, we substitude $C_3$ by $W-C_1-C_2$ in @pc_consumption_3_a_maximizee and have 
+      $
+        U_1(C_1, C_2, C_3) &= U_1(C_1, C_2, W-C_1-C_2)\
+        &= ln C_1 + beta dot.c ln C_2 + beta dot.c ln (W-C_1-C_2).
+      $
+      Setting two partial derivatives of $U_1$ (with respect to $C_1$ and to $C_2$)
+      $
+        pdiff(U_1, C_1)(C_1, C_2, C_3) &= 1/C_1 - beta/(W-C_1-C_2)
+      $
+      and 
+      $
+        pdiff(U_1, C_2)(C_1, C_2, C_3) &= beta/C_2 - beta/(W-C_1-C_2).
+      $
+      Setting the partial derivatives to zero, we solve the system 
+      $
+        & cases(
+          display(1/C_1 - beta/(W-C_1-C_2) &= 0),
+          display(beta/C_2 - beta/(W-C_1-C_2) &= 0)
+        )\
+        => quad & cases(
+          beta C_1 &= W-C_1-C_2,
+          #hide($beta$) C_2 &= W-C_1-C_2
+        )\
+        => quad & cases(
+          C_1 &= display(W / (1+2 beta)),
+          C_2 &= display((beta W) / (1+2 beta)),
+          C_3 &= display((beta W) / (1+2 beta))
+        )
+      $
+    + (_No commitment, naïvete_) The individual chooses $C_1$ in period 1 to maximize the period-1 objective function, thinking he or she will also choose $C_2$ to maximize this objective function. In fact, however, the individual chooses $C_2$ to maximize the period-2 objective function.\
+      *Solution*.
+    + (_No commitment, sophistication_) The individual chooses $C_1$ in period 1 to maximize the period-1 objective function, realizing that he or she will choose $C_2$ in period 2 to maximize the period-2 objective function.\
+      *Solution*.
+  + Use your answers to parts (a) and (b) to explain in what sense the individuals' preferences are time-inconsistent. Explain intuitively why sophistication does not produce different behavior than naïvete.\
+    *Solution*.
