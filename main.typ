@@ -56,7 +56,7 @@ Below are the conditions that $F:RR^2 -> RR$ needs to satisfy.
 
 The most comprehensive production function is the constant elasticity of substitution production function (CES production function), 
 $
-  Y(t)=(alpha dot.c (K(t))^((sigma-1)/sigma)+(1-alpha)(A(t) L(t))^((sigma-1)/sigma)) ^(sigma/(sigma-1)).
+  Y(t) = ( alpha dot.c (K(t))^((sigma-1)/sigma)+(1-alpha)(A(t) L(t))^((sigma-1)/sigma) ) ^(sigma/(sigma-1)).
 $ <solow_ces>
 
 #newpar We can derive many other productions functions via the constant elasticity of substitution production function. In @solow_ces, if we take $sigma -> 1,$ we will get the Cobb-Douglas production function, 
@@ -74,7 +74,7 @@ $
 
 We assume, by Kaldor facts, labor $L(t)$ and productivity $A(t)$ grow at constant. That is, 
 $
-  g_L (t):= (dot(L)(t))/L(t) = n >= 0 quad "and" quad g_A (t):= (dot(A)(t))/A(t) = g >= 0.
+  g_L (t) := (dot(L)(t))/L(t) = n >= 0 quad "and" quad g_A (t) := (dot(A)(t))/A(t) = g >= 0.
 $ In previous equations, $g_X (t)$ denotes the _growth rate_ of variable $X(t).$ Note that the _rate of change_ of $X(t)$ is $dot(X)(t).$ Do not be confused by these two nouns.
 
 Aside from these assumptions, we say that a fraction $s in (0, 1]$ of output is invested. That is, 

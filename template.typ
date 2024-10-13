@@ -218,7 +218,7 @@
 }
 
 #let main_document(title: "", subtitle: "", abs: "", pref: "", content) = {
-  show math.equation: set text(font: "Libertinus Math")
+  // show math.equation: set text(font: "Libertinus Math")
   show math.equation: set block(spacing: 1.9em)
   show math.equation: it => {
     if it.fields().keys().contains("label") {
