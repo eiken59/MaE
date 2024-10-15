@@ -1315,8 +1315,8 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
       Set the partial derivative of @pc_consumption_3_a_iii_maximizee with respect to $C_1$ to be zero, we have 
       $
         1/C_1 - beta/(W-C_1) - beta/(W-C_1) &= 0\
-        ==> qquad qquad qquad quad W-C_1 - 2beta dot.c C_1 &= 0\
-        ==> qquad qquad qquad qquad qquad quad smallspace smallspace smallspace star(C_1) &= W/(1+2 beta).
+        ==> qquad qquad qquad doub #hide($star(C_1)$) W-C_1 - 2beta dot.c C_1 &= 0\
+        ==> qquad qquad qquad doub #hide($W-C_1 - 2beta dot.c C_1$) star(C_1) &= W/(1+2 beta).
       $
       We can hence see that the three-tuple $(star(C_1), star(C_2), star(C_3))$ is the same as the one in the previous question. #qqed
   + Use your answers to parts (a) and (b) to explain in what sense the individuals' preferences are time-inconsistent. Explain intuitively why sophistication does not produce different behavior than naïvete.\
