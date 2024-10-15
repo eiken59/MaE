@@ -795,13 +795,11 @@ $
   EE(u '(tilde(C_1))) >= u '(EE(tilde(C_1))).
 $ <consumption_unvertainty_jensen>
 
-#newpar Compare two situations, without uncertainty and with uncertainty.
-
-Call $star(C_0)$ the solution for $C_0$ with no uncertainty over $Y_0$ and $Y_1;$ call $C_0 '$ the solution for $C_0$ with uncertainty over $Y_1.$ Note that $C_0, Y_0, "and" Y_1$ are variables like $x$ or $y,$ while $star(C_0)$ and $C_0 '$ are solutions (constant).
+#newpar Compare two situations, without uncertainty and with uncertainty. Call $star(C_0)$ the solution for $C_0$ with no uncertainty over $Y_0$ and $Y_1;$ call $C_0 '$ the solution for $C_0$ with uncertainty over $Y_1.$ Note that $C_0, Y_0, "and" Y_1$ are variables like $x$ or $y,$ while $star(C_0)$ and $C_0 '$ are solutions (constant).
 
 See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_after about the comparison between two levels of uncertainty. In @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_after, $sigma_1 < sigma_2$ and $C_0 ' > C_0 ''.$ This suggests more uncertainty leads more saving.
 
-#figure(caption: [With convex $u ',$ a rise in $"Var"(Y_1)$ lowers optimal $C_0.$ Before the rise, the optimal is now $C_0 '.$])[
+#figure(caption: [With convex $u ',$ a rise in $VV(Y_1)$ lowers optimal $C_0.$ Before the rise of $sigma,$ the optimal first-period consumption is $C_0 '.$])[
   #columns(
     2,
     gutter: 0pt
@@ -812,7 +810,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
   ]
 ] <consumption_uncertainty_convex_before>
 
-#figure(caption: [With convex $u ',$ a rise in $"Var"(Y_1)$ lowers optimal $C_0.$ After the rise, the optimal is now $C_0 ''.$])[
+#figure(caption: [With convex $u ',$ a rise in $VV(Y_1)$ lowers optimal $C_0.$ After the rise of $sigma,$ the optimal first-period consumption is $C_0 ''.$])[
   #columns(
     2,
     gutter: 0pt
@@ -1179,9 +1177,9 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
     With a positive income effect and a negative substitution effect, the overall response of current consumption $C_1$ (and thus saving $S = Y_1-C_1$) is ambiguous. When the income effect dominates, an increase in $r$ leads to a reduction in savings; when the substitution dominates, an increase in $r$ leads to a rise in savings.
     #figure()[
       #columns(2)[
-        #image("figures/pc_consumption_1_c_1.png", width: 86%)
+        #image("figures/pc_consumption_1_c_1.png", width: 100%)
         #colbreak()
-        #image("figures/pc_consumption_1_c_2.png", width: 86%)
+        #image("figures/pc_consumption_1_c_2.png", width: 100%)
       ]
     ] #qqed
 + Consider an individual who lives from $0$ to $T,$ and whose lifetime utility is given by $ U(C_0, dots, C_T)=sum_(t=0)^T u(C(t)), $ where $u '>0$ and $u ''<0.$ The integer $T$ is greater than $2.$
@@ -1201,11 +1199,11 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
       <==> quad (R+1) Y_0 + g dot.c (R dot.c (R+1))/2 &= sum_(t=0)^T C_t.
     $ <pc_consumption_2_bc> #qqed
   + Prove that the individual wishes constant $C(t)$ for all dates $t in {0, dots , T}.$\
-    *Proof*. Without loss of generality, assume $C(t_1) > C(t_2)$ for some $t_1 != t_2$ on the consumption path. Since $u$ is strictly concave, we will have 
+    *Proof*. Without loss of generality, assume $C(t_1) > C(t_2)$ for some $t_1 != t_2 in {0, dots , T},$ and this sequence of consumption will yield optimal. Since $u$ is strictly concave, we will have 
     $
       u((C(t_1)+C(t_2))/2) > display(u(C(t_1))+u(C(t_2)))/2.
     $
-    Hence, there is one more consumption bundle $(display((C(t_1)+C(t_2))/2), display((C(t_1)+C(t_2))/2))$ on $t_1$ and $t_2$ that yields a greater utility, a contradiction. Therefore, the individual wishes constant consumption for all dates. #qqed
+    Hence, there is one more consumption bundle $(display((C(t_1)+C(t_2))/2), display((C(t_1)+C(t_2))/2))$ at $t_1$ and $t_2$ on the budget constraint (since $r=0$) that yields a greater utility, a contradiction. Therefore, the individual wishes constant consumption for all dates. #qqed
   + What is the path of the individual's wealth as a function of $t?$\
     *Solution*. From @pc_consumption_2_bc, we know that the constant consumption 
     $
@@ -1307,8 +1305,7 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
       *Solution*. From the previous question, we know that if one is maximizing the period-2 objective function, we must have 
       $
         star(C_2)(C_1) = display((W - C_1)/(1 + beta)) quad "and" quad star(C_3)(C_1) = display((beta dot.c (W - C_1))/(1+beta)).
-      $ <pc_consumption_3_a_iii_relation>
-      Hence, by @pc_consumption_3_a_iii_relation, we only need to maximize
+      $ <pc_consumption_3_a_iii_relation> That is, $C_2$ and $C_3$ will be uniquely determined by $C_1.$ Hence, by @pc_consumption_3_a_iii_relation, we only need to maximize
       $
         &#hide($=$)U_1(C_1, star(C_2)(C_1), star(C_3)(C_1))\
         &= ln C_1 + beta dot.c (ln star(C_2)(C_1)) + beta dot.c (ln star(C_3)(C_1))\
@@ -1318,8 +1315,8 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
       Set the partial derivative of @pc_consumption_3_a_iii_maximizee with respect to $C_1$ to be zero, we have 
       $
         1/C_1 - beta/(W-C_1) - beta/(W-C_1) &= 0\
-        W-C_1 - 2beta dot.c C_1 &= 0\
-        star(C_1) &= W/(1+2 beta).
+        ==> qquad qquad qquad quad W-C_1 - 2beta dot.c C_1 &= 0\
+        ==> qquad qquad qquad qquad qquad quad smallspace smallspace smallspace star(C_1) &= W/(1+2 beta).
       $
       We can hence see that the three-tuple $(star(C_1), star(C_2), star(C_3))$ is the same as the one in the previous question. #qqed
   + Use your answers to parts (a) and (b) to explain in what sense the individuals' preferences are time-inconsistent. Explain intuitively why sophistication does not produce different behavior than naïvete.\
