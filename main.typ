@@ -19,7 +19,7 @@
   ]
 )
 
-= The Solow Model
+= The Solow Model <solow>
 
 Kaldor in 1961 published "Capital Accumulation and Economics Growth," in which he stylized that there are five facts in processes of economics growth,
 + output per worker grows at a roughly constant rate that does not diminish over time (roughly $2%$),
@@ -524,7 +524,7 @@ Technological change can be theorized as a side-effect of economic activity or a
 
 The most up-to-date models involve investment in research and development or are based on human capital—naturally, these models are more complex than what we have covered so far. They feature individually rational decision-making. As Romer explains in 1986 and 1990, firms invest in research and development in the hope of outpacing their competitors, and in pure and perfect competition, no costly research and development is undertaken due to the high costs. Lucas, in 1988, also notes that individuals acquire human capital to increase future labor earnings, although this comes at the expense of reduced earnings today. These models are complex, and we are currently unable to treat them extensively.
 
-= Theory of Consumption
+= Theory of Consumption <consumption>
 
 We have taken minimal assumptions about consumption; we assumed a constant saving rate $s$ with consumption $ C_t = (1-s) Y_t $ and investment $ I_t = s Y_t. $
 
@@ -820,6 +820,91 @@ See @consumption_uncertainty_convex_before and @consumption_uncertainty_convex_a
     #image("figures/consumption_uncertainty_convex_after_c_1.png", width: 86%)
   ]
 ] <consumption_uncertainty_convex_after>
+
+= Overlapping-Generations Models
+
+// == Introduction
+
+We have taken assumptions regarding aggregated relationships, such as $S = s Y$ in @solow, and modeled individual behavior in @consumption. The next step is to aggregate individual behaviors; in order to do so, we need to assume a *demographic structure*. We specifically focus on the interactions between utility-maximizing agents on markets.
+
+The _overlapping-generations_ structure is one central demographic structure in macroeconomics. The other one is made of infinite-lives consumers (or dynasties) all born at the initial date.
+
+== Overlapping-Generations
+
+The assumption of overlapping generations implies that at each date, different generations of individuals, of various ages, coexist. One period after, the oldest people die, the young gets older, and a new generation comes up.
+
+Why do we study overlapping-generations models? In reality, generations do overlap: people are born and do die. This is a natural framwork of analysis for inter-generational issues:
+- causes and implications of life-cycle behavior,
+- pension systems (fully-funded vs. pay-as-you-go),
+- public dept,
+- endogenous fertility, family macroeconomics, human capital, etc.
+
+#newpar
+
+Simple overlapping-generations models generate new and important insites on inter-generational dynamics and welfare.
+
+However, market equilibrium can be Pareto-suboptimal in overlapping-generations models even seemingly without any market distortion (imperfect competition, moral hazard, adverse selection, etc.). More importantly, we have a conclusion that the demographic structure itself can lead to some inefficiency.
+
+#figure(
+  caption: [Two-period Overlapping Generations],
+  kind: "image",
+  supplement: [Figure]
+)[
+  #table(
+    columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+    stroke: 0pt,
+    column-gutter: -5pt,
+    row-gutter: -10pt,
+    table.cell(inset: (bottom: 20pt))[], [$t = 0$], [$t = 1$], [$t = 2$], [$t = 3$], [], [Time],
+    [#box(stroke: none, inset: 10pt, width: 3em, [$qquad$])], [#box(stroke: 1pt + gray, inset: 10pt, width: 6em, [Old $-1$])], [], [], [], [], [],
+    [#box(stroke: none, inset: 10pt, width: 3em, [$qquad 0$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Young $0$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Old $0$])], [], [], [], [],
+    [#box(stroke: none, inset: 10pt, width: 3em, [$qquad 1$])], [], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Young $1$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Old $1$])], [], [], [],
+    [#box(stroke: none, inset: 10pt, width: 3em, [$qquad 2$])], [], [], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Young $2$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Old $2$])], [], [],
+    [#box(stroke: none, inset: 10pt, width: 3em, [$qquad 3$])], [], [], [], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Young $3$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Old $3$])], [],
+    [#box(stroke: none, inset: 10pt, width: 3em, [$space$])], [], [], [], [], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [$dots.down$])], [],
+    [Generations],
+  )
+]
+
+#figure(
+  caption: [Three-period Overlapping Generations],
+  kind: "image",
+  supplement: [Figure]
+)[
+  #table(
+    columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+    stroke: 0pt,
+    column-gutter: -5pt,
+    row-gutter: -10pt,
+    table.cell(inset: (bottom: 20pt))[], [$t = 0$], [$t = 1$], [$t = 2$], [$t = 3$], [], [Time],
+    [#box(stroke: none, inset: 10pt, width: 3em, [$qquad$])], [#box(stroke: 1pt + gray, inset: 10pt, width: 6em, [Adult $-1$])], [#box(stroke: 1pt + gray, inset: 10pt, width: 6em, [Old $-1$])], [], [], [], [],
+    [#box(stroke: none, inset: 10pt, width: 3em, [$qquad 0$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Young $0$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Adult $0$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Old $0$])], [], [], [],
+    [#box(stroke: none, inset: 10pt, width: 3em, [$qquad 1$])], [], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Young $1$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Adult $1$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Old $1$])], [], [],
+    [#box(stroke: none, inset: 10pt, width: 3em, [$qquad 2$])], [], [], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Young $2$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Adult $2$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Old $2$])], [],
+    [#box(stroke: none, inset: 10pt, width: 3em, [$qquad 3$])], [], [], [], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Young $3$])], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [Old $3$])], [],
+    [#box(stroke: none, inset: 10pt, width: 3em, [$space$])], [], [], [], [], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [$dots.down$])], [],
+    [Generations], [], [], [], [], [], [],
+    [$space$]
+  )
+]
+
+== Overlapping-Generations in Endowment Economies
+
+In this subsection, we will see a 2-period overlapping generations model given by Paul Samuelson in 1958.
+
+Consider a 2-period overlapping generations structure. There is one perishable (non-storable) good.
+
+== The Diamond Model
+
+// === Setup
+
+=== The Optimal Steady State
+
+=== Decentralized dynamics
+
+=== Decentralized Steady State
+
+=== Public Debt
 
 
 // Appendix
