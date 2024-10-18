@@ -186,6 +186,10 @@
   $content ^ pow$
 }
 
+#let sub(content, subs) = {
+  $content _ subs$
+}
+
 #let dif_op(var, order: "") = {
   if (order == "") [
     $display(dif / (dif var))$

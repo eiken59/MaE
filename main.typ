@@ -558,7 +558,7 @@ For the instantaneous utility function $u,$ there is a common function called th
 $
   u(C) = (C^(1-theta)-1)/(1-theta),
 $ <consumption_CIES>
-where $theta in R^+ \\ {1}.$ The constant $theta$ is the intertemporal elasticity of substitution as well as the inverse of the relative risk aversion. Note that the log utility, also known as the Cobb-Douglas utility,
+where $theta in RR^+ \\ {1}.$ The constant $theta$ is the intertemporal elasticity of substitution as well as the inverse of the relative risk aversion. Note that the log utility, also known as the Cobb-Douglas utility,
 $
   u(C) = ln C
 $
@@ -864,7 +864,7 @@ However, market equilibrium can be Pareto-suboptimal in overlapping-generations 
     [#box(stroke: none, inset: 10pt, width: 3em, [$space$])], [], [], [], [], [#box(stroke: 1pt + black, inset: 10pt, width: 6em, [$dots.down$])], [],
     [Generations],
   )
-]
+] <olg_two_period_OLG>
 
 #figure(
   caption: [Three-period Overlapping Generations],
@@ -892,7 +892,52 @@ However, market equilibrium can be Pareto-suboptimal in overlapping-generations 
 
 In this subsection, we will see a 2-period overlapping generations model given by Paul Samuelson in 1958.
 
-Consider a 2-period overlapping generations structure. There is one perishable (non-storable) good.
+Consider a 2-period overlapping generations structure. There is one perishable (non-storable) good. Each generation is $(1+n)$ times as big as the previous one with the relation $ N_(t+1) = (1+n) N_t,$ where $N_t$ is the size of generation $t,$ $N_0 = 1.$ Take @olg_two_period_OLG for example, the number of people in Young 2 will be (1+n) times as big as the number of people in Young 1, and the number of people in Old 1 equals the number of people in Young 1.
+
+In addition, we assume that all individuals have the utility function $U$ over young-age consumption $c^y$ and old-age consumption $c_o$ with 
+$
+  U(c^y, c^o) = u(c^y) + beta dot.c u(c^o),
+$
+where $u ''<0,$ $u '>0,$ and $u$ satisfies the Inada condition.
+
+The young is endowed with 1 unit of the perishable good, and the old is endowed with 0.
+
+=== Credit Markets
+
+It is natural that people start from credit markets, i.e., markets without money.
+
+If facing an interest rate $r>-1,$ the young born at date $t$ wants to save to finance old-age consumption, since there will be no income in your old-age year.
+
+However, there is actually no way to save. The good is perishable, the other young people want to save as well, and old people will not be able to repay in the next period. Hence, the old will just consume $c^o = 0,$ while the young will consume $c^y = 1,$ which is a suboptimal equilibrium.
+
+The credit market cannot function on a bilateral basis under 2-period overlapping generation models, as two people of different generations never meet twice.
+
+=== Remedy
+
+Imagine that there exists an agree-on in fixed quantity $M$ (say gold or usless paper "money"), initially held by the old of date $t=0.$
+
+Suppose that the old and every future generation believe they will be able to buy and sell money at price $p_t$ in period $t$ in terms of goods.
+
+People might now be able to buy money for goods when young, sell money for goods when old. Does it happen at equilibrium? What is the equilibrium interest rate $display(p_(t+1)/p_t)?$
+
+Suppose you were born at date $t >= 0.$ If you know $p_t$ and have perfect foresight over $p_(t+1),$ your program will be maximizing your utility $U,$ i.e., looking for 
+$
+  max_(m_t) u(1-p_t m_t) + beta dot.c u(p_(t+1)m_t),
+$
+where $m_t$ stands for the price of money in terms of the good.
+
+To maximize the function, we just set the first derivative to be zero and have 
+$
+  u '(1- p_t m_t) dot.c (- p_t) + beta dot.c u '(p_(t+1)m_t) dot.c p_(t+1) &= 0\
+  u '(1- p_t m_t) &= beta dot.c u '(p_(t+1)/(p_t) dot.c p_t m_t) dot.c p_(t+1)/(p_t),
+$
+which implies 
+$
+  p_t m_t = f(p_(t+1)/(p_t))
+$
+for some function $f.$
+
+Hence, the demand-supply equilibrium at date $t$ required
 
 == The Diamond Model
 
@@ -990,7 +1035,7 @@ Consider a 2-period overlapping generations structure. There is one perishable (
     #figure(numbering: none)[
       #image("figures/ps_solow_2_b.jpeg", width: 43%)
     ]
-    If the stock of capital per worker is lower than the low steady-state value $underline(k),$ actual investment is lower than break-even investment, and the capital stock per worker decreases over time and converges to zero. If the stock of capital per worker exceeds $underline(k),$ the economy will diverge from $underline(k)$ making the low steady state unstable. It will ultimately converge to its stable steady state $overline(k)$ even if there is too much capital and $k > overline(k)$. Indeed, if $underline(k) < k < underline(k)$, actual investment exceeds break-even investment and the economy accumulates capital per worker. The opposite takes place when $k > overline(k)$, because break-even investment (or capital consumption line) is above the actual investment line and capital stock decreases. #qqed
+    If $k<underline(k),$ actual investment is lower than break-even investment, and the capital stock per worker decreases over time and converges to zero. If $k>underline(k),$ the economy will diverge from $underline(k)$ making the low steady state unstable. It will ultimately converge to its stable steady state $overline(k)$ even if there is too much capital and $k > overline(k)$. Indeed, if $underline(k) < k < overline(k)$, actual investment exceeds break-even investment and the economy accumulates capital per worker. The opposite takes place when $k > overline(k)$, because break-even investment (or capital consumption line) is above the actual investment line and capital stock decreases. #qqed
   + Ignore the unstable steady state and consider a permanent increase in per capita government spending, $gamma.$ Illustrate the paths of the following variables over time:
     + The growth rate of capital.\
       *Solution*. An increase in $gamma$ lowers capital per worker and output per worker in the (new) steady state. When the economy reaches its new steady state, the growth rates of aggregate output, investment and consumption will equal the growth rate in population $n,$ the growth rate of the aggregates in the previous steady state.
@@ -1000,12 +1045,12 @@ Consider a 2-period overlapping generations structure. There is one perishable (
       The growth of $K$ drops, but as the economy moves to the new steady state with lower $k,$ it gradually moves back to $n.$ The dynamics of $g_K$ is illustrated below.
       #figure()[
         #image("figures/ps_solow_2_c_g_X.jpeg", width: 43%)
-      ]
+      ] #qqed
     + Output per capita.\
       *Solution*. It follows the dynamics of $k,$ since $y=f(k).$ It smoothly converges to the new (and lower) steady-state level $y_s '.$ The dynamics of $y$ is illustrated below.
       #figure()[
         #image("figures/ps_solow_2_c_y.jpeg", width: 43%)
-      ]
+      ] #qqed
     + Private consumption per capita.\
       *Solution*. Consumption depends on the disposable income, 
       $
@@ -1016,7 +1061,7 @@ Consider a 2-period overlapping generations structure. There is one perishable (
       Thus, per-capita consumption sharply decreases in the short-run when the government increases its per-capita spending. Then it follows the transition path of $y(t)$ being a constant fraction of the disposable income per capita. The dynamics of $c$ is illustrated below.
       #figure(caption: none)[
         #image("figures/ps_solow_2_c_c.jpeg", width: 43%)
-      ]
+      ] #qqed
 + Consider the Solow model of economic growth with no technological progress ($g = 0$).
   
   The production function is $Y= F(K, L)$, where both output $Y$ and the capital stock $K$ are measured in terms of the quantity of trucks and L is the labor force. Assume each worker requires a truck in order to produce any output (new trucks), but cannot use more than one truck at the same time. Assume also that it takes four workers (and four trucks) to produce one unit of output. It implies that the production function is $ Y=1/4 min{K, L}. $ The labor force is equal to employment and grows at a constant rate $n,$ the capital stock depreciates at a constant rate $delta$, and the saving rate is $s.$ One unit of good can be turned into one truck.
@@ -1260,6 +1305,13 @@ Consider a 2-period overlapping generations structure. There is one perishable (
     Calculating the income effect means obtaining the effect of removing this hypothetical decrease in income, that is, the effect of the parallel shift of the budget constraint from the dashed line to the one passing through the endowment point. This is an upward shift, and given the assumption that consumption is a normal good, the response of current consumption to this shift is positive.
 
     With a positive income effect and a negative substitution effect, the overall response of current consumption $C_1$ (and thus saving $S = Y_1-C_1$) is ambiguous. When the income effect dominates, an increase in $r$ leads to a reduction in savings; when the substitution dominates, an increase in $r$ leads to a rise in savings.
+
+    A specific example is in @consumption_CIES. When $theta>1,$ we can know that if $Y_2 = 0,$ the optimal consumption in the first period 
+    $
+      star(C_1) &= Y_0 / (1 + display(((beta dot.c (1+r))^(1/theta))/(1+r)))\
+      &=Y_0 / (1 + beta^(1/theta)) dot.c (1+r)^((1-theta)/(theta))
+    $
+    is decreasing in $r.$
     #figure()[
       #columns(2)[
         #image("figures/pc_consumption_1_c_1.png", width: 100%)
