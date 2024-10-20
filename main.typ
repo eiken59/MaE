@@ -1045,12 +1045,12 @@ $
 $ 
 in which $w_t$ and $r_(t+1)$ will determine a saving function 
 $
-  s_t = arg max_s_t U(w_t - s_t, (1+r_(t+1) dot.c s_t)):=s(w_t, r_(t+1)).
+  s_t = arg max_s_t U(w_t - s_t, (1+r_(t+1)) dot.c s_t):=s(w_t, r_(t+1)).
 $
 
 The model's dynamics are summarized by a sequence $(k_t)_(t = 0).$ The sequence $(k_t)_(t = 0)$ is an equilibrium sequence of capital-labor ratios if and only if 
 $ 
-  K_(t+1)/L_(t+1) = s_t L_t qquad ==> qquad k_(t+1) &= s_t/(1+n)\
+  K_(t+1)/L_(t+1) = s_t L_t qquad <==> qquad k_(t+1) &= s_t/(1+n)\
   &= (s(f(k_t) - k_t dot.c f '(k_t), f '(k_(t+1))))/(1+n).
 $
 
@@ -1121,13 +1121,46 @@ $
   -epsilon + (1+n) epsilon > -epsilon + (1+hat(r))epsilon.
 $
 
-=== Public Debt
+_Remark_. There should be some content below about public debt. However, it is too complicated for me to understand, and Dr. Senouci said we should consider those off-program. Hence, there is no content about this topic.
 
-We first talk about the external debt.
+// I really cannot figure out about the following parts about public debt.
+// Dr. Senouci: Consider this off-program.
+
+// === Public Debt: External Debt
+
+// We first talk about the external debt. Imagine the government issues $g_1>0$ units of external debt per worker, which borrows $(1+n)g_1$ and repays $(1+r_(t+1))g_1$ to date-$t$ creditors. This goes on at each period. The debt is assumed not to affect directly the consumers' welfare.
+
+// Hence, rational consumers want to find 
+// $
+//   max_s U(w-s - (r-n)g_1, (1+r)s).
+// $
+
+// The equilibrium will occur if and only if $ k=(s(w-(r-n)g_1, r))/(1+n), $ where $w=f(k)-k dot.c f '(k)$ and $r= f '(k).$
+
+// If the income effect dominates the substitution effect, i.e., savings depend on $w-(r-n)g_1$ and little on $r,$ then an increase in $g_1$ translates into lower $k$ if and only if $ r-n>0. $ The effect of external debt goes in the wrong direction (away from the golden rule $f '(star(k))=n$).
+
+// === Public Debt: Internal Debt
+
+// We now talke about the internal debt. Imagine the government issues $g_2>0$ units of internal debt per worker with nearly the same process, except that now $(r-n)g$ does not leaven the economy and public debt comptets with capital as a means of saving $ s_t/(1+n) = k_(t+1)+g_2. $ 
+// Rational consumers want to find 
+// $
+//   max_s U(w-s - (r-n)g_2, (1+r)s).
+// $
+
+// The equilibrium will occur if and only if $ k=(s(w-(r-n)g_2, r))/(1+n)-g_2, $ where $w=f(k)-k dot.c f '(k)$ and $r= f '(k).$
 
 
+= The IS-LM Model
 
+// == Introduction and History
 
+== The Goods Market
+
+== The Money Market
+
+== Equilibrium in the IS-LM model
+
+== Policy
 
 
 
@@ -1663,3 +1696,68 @@ We first talk about the external debt.
     But the sophisticated individual also realizes that some of the increase in saving will be devoted to $C_3$, which will be low. The individual values $C_3$ as much as $C_2$ and thus marginal utility will be high in period 3. This tends to make the increase in saving look relatively more attractive to the sophisticated individual than to the naïve individual.
 
     With log utility, these two effects exactly offset each other. With a general utility function, a sophisticated individual can consume either more or less in the first period than a naïve individual. #qqed
+
+== Overlapping-Generations Models
+
++ We consider a 3-period overlapping-generations model, where individuals born at date some date $t$ are first "Young," then "Adult," then "Old." Successive cohorts gorw at rate $n > -1.$ There is only one good. The young and the adult is endowed with $1$ unit of that good, and the old is endowed with none. Hence, lifetime endowment can be written $(1, 1, 0).$ All individuals have the same utility function over consumption at the three ages: $ U(C_1, C_2, C_3) = u(C_1) + beta dot.c u(C_2) + beta^2 dot.c u(C_3), $ where $u$ is a strictly increasing and strictly concave function and $beta in (0, 1).$
+  + The real interest rate between dates $tau$ and $tau + 1$ is $r_(tau + 1).$ We call $R_(tau + 1) = display(1 / (1 + r_(tau + 1)))$ the associated (objective) discount factors. Set the problem of a consumer born at some time date $t$ without solving it.
+  + Call $(C_1(R_(t+1), R_(t+2)), C_2(R_(t+1), R_(t+2)), C_3(R_(t+1), R_(t+2)))$ the solution to the maximization problem in the previous question. Prove that some sequence of real interest rates constitude a general, intertemporal equilibrium if and only if 
+    $
+      1 + 1/(1+n) = C_1(R_(t+1), R_(t+2)) + 1/(1+n) dot.c C_2(R_(t+1), R_(t+2)) + 1/(1+n)^2 dot.c C_3(R_(t+1), R_(t+2)).
+    $
+  + Prove that $(r_tau = n)_(tau)$ constitutes a competitive equilibrium.
+  + Consider the following optimization problem $cal(P)^"SP"$: find 
+    $
+      max_(C_1, C_2, C_3) U(C_1, C_2, C_3)
+    $
+    under the constraint
+    $
+      C_1 + C_2/(1+n) + C_3/(1+n)^2 <= 1 + 1/(1+n).
+    $
+    Interpret this problem. Prove that the equilibrium  obtained in question c reaches the maximum sustainable level of welfare for all generations.
+  + Draw a picture representing all the flows of goods that go with the credit market. One should consider the case where the young and the adults save, i.e., $C_1< 1$ and $C_2<1$ at the $r=n$ equilibrium.
+  + Imagine now people have to lend to each other on a bilateral basis, hence need to meet twice for any credit contract. We assume that $n=0, u = ln,$ and $beta = 1.$ An agent born at date $t$ will
+    - incur debt $R dot.c v_d$ when young and reimbruses $v_d$ when adult, and
+    - lend $R dot.c v_ell$ when adult and get reimbrusement $v_ell$ when old.
+    Let $R = display(1/(1+r))>0$ be some fixed discount rate. Write and solve the agent's problem, i.e., find optimal values of $u_d$ and $u_ell$ as functions of $R.$
+  + What is the equilibrium value of $R$ in the economy with only bilateral credit?
++ Consider the following overlapping-generations model (baseline Diamond in 1965). Angents live for two periods. An agent born at date $t >= 0$ has no initial wealth and is endowed with $1$ unit of labor that one rents on the labor market in exchange for real wage $w_t.$ All agents have utility $U$ over young-age consumption $sub(c^y, t)$ and old-age consumption $sub(c^o, t+1)$ with 
+  $
+    U(sub(c^y, t), sub(c^o, t+1)) = ln (sub(c^y, t)) + beta dot.c ln (sub(c^o, t+1)),
+  $
+  where $beta in (0, 1).$ The agent save $ s_t = w_t - sub(c^y, t) $ in the first period, in which case one can consume $ sub(c^o, t+1)=(1+r_(t+1))s_t $ at old age.
+
+  Production per worker is $ y_t = f(k_t) = power(k_t, alpha), $ where $k_t$ is the capital-labor ratio and $alpha = (0, 1).$ Perfect competition on the inputs markets guarantee that capital and labor are priced at their marginal productivities, 
+  $
+    r_(t=1) = f '(k_(t+1)) quad "and" quad w_t = f(k_t)-k_t dot.c f '(k_t).
+  $
+  
+  The growth rate of the population is constant $n.$ The capital-labor ratio at date $t$ is equal to the savings of people who are old at date $t,$ divided by $1+n.$ The capital-labor ratio at time $t=0$ is exogenously given.
+
+  + Set and solve the program of a date-$t$ agent. How much does one save for a wage $w_t?$\
+    *Solution*. The agent wants to find 
+    $
+      max_(sub(c^y, t), sub(c^o, t+1)) U(sub(c^y, t), sub(c^o, t+1))
+    $
+    under the constraint
+    $
+      sub(c^y, t) + sub(c^o, t+1)/(1+n) = w_t.
+    $
+    Hence, we just need to set the first derivative of $U$ is zero and have
+    $
+      diff(, sub(c^y, t))U(sub(c^y, t), (1+n)(w_t - sub(c^y, t))) &= diff(, sub(c^y, t)) ln (sub(c^y, t)) + beta dot.c ln ((1+n)(w_t - sub(c^y, t)))\
+      &= 1/sub(c^y, t) + beta dot.c 1/((1+n)(w_t - sub(c^y, t)))dot.c (-1-n)\
+      &= 1/sub(c^y, t) - beta/(w_t - sub(c^y, t))\
+      &= 0,
+    $
+    which implies $display(sub(c^y, t) = w_t/(1+beta)).$ Hence, the agent saves 
+    $
+      s_t = (beta dot.c w_t)/(1+beta).
+    $ #qqed
+  + Find a dynamic equation for $k_t,$ i.e., an equation of the form $k_(t+1)=psi(k_t)$ for some function $psi.$ Prove that $k_t$ converges to some value $star(k)$ (to be determined) as time goes to infinity.
+  + We consider now a "fully-funded" pension system: at each date $t,$ the government collects lump-sum taxes $tau_t$ from the young agents. The tax receipts are invested in physical capital and returned to the old generation the next period. The old at $t+1$ then get $(1+r_(t+1))tau_t$ with $0 <= tau_t < star(s_t),$ where $star(s_t)$ is the saving desired by the individuals born at time $t$ in the absence of the pension system.
+
+    How will the capital stock be affected by this pension system?
+  + We consider now a "pay-as-you-go" pension system: at each date $t,$ the government collects lump-sum taxes $tau_t$ from the young agents. The tax reciepts are transferred to the old who are alive at date $t;$ hence every old at date $t$ gets $(1+n) tau_t.$ Assume that the lump-sum tax per worker is constant: $tau_t = tau$ for all $t,$ and that it is lower than the wage rate $w_t$ at all dates.
+
+    How will the capital stock be affected by this pension system, on impact (quualitatively)? What will happen over time?
