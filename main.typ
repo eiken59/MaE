@@ -1754,7 +1754,8 @@ _Remark_. There should be some content below about public debt. However, it is t
     $
       s_t = (beta dot.c w_t)/(1+beta).
     $ #qqed
-  + Find a dynamic equation for $k_t,$ i.e., an equation of the form $k_(t+1)=psi(k_t)$ for some function $psi.$ Prove that $k_t$ converges to some value $star(k)$ (to be determined) as time goes to infinity.
+  + Find a dynamic equation for $k_t,$ i.e., an equation of the form $k_(t+1)=psi(k_t)$ for some function $psi.$ Prove that $k_t$ converges to some value $star(k)$ (to be determined) as time goes to infinity.\
+    *Solution*.
   + We consider now a "fully-funded" pension system: at each date $t,$ the government collects lump-sum taxes $tau_t$ from the young agents. The tax receipts are invested in physical capital and returned to the old generation the next period. The old at $t+1$ then get $(1+r_(t+1))tau_t$ with $0 <= tau_t < star(s_t),$ where $star(s_t)$ is the saving desired by the individuals born at time $t$ in the absence of the pension system.
 
     How will the capital stock be affected by this pension system?
