@@ -846,7 +846,7 @@ Simple overlapping-generations models generate new and important insites on inte
 However, market equilibrium can be Pareto-suboptimal in overlapping-generations models even seemingly without any market distortion (imperfect competition, moral hazard, adverse selection, etc.). More importantly, we have a conclusion that the demographic structure itself can lead to some inefficiency.
 
 #figure(
-  caption: [Two-period Overlapping Generations],
+  caption: [Two-Period Overlapping Generations],
   kind: "image",
   supplement: [Figure]
 )[
@@ -867,7 +867,7 @@ However, market equilibrium can be Pareto-suboptimal in overlapping-generations 
 ] <olg_two_period_OLG>
 
 #figure(
-  caption: [Three-period Overlapping Generations],
+  caption: [Three-Period Overlapping Generations],
   kind: "image",
   supplement: [Figure]
 )[
@@ -892,9 +892,9 @@ However, market equilibrium can be Pareto-suboptimal in overlapping-generations 
 
 In this subsection, we will see a 2-period overlapping generations model given by Paul Samuelson in 1958.
 
-Consider a 2-period overlapping generations structure. There is one perishable (non-storable) good. Each generation is $(1+n)$ times as big as the previous one with the relation $ N_(t+1) = (1+n) N_t,$ where $N_t$ is the size of generation $t,$ $N_0 = 1.$ Take @olg_two_period_OLG for example, the number of people in Young 2 will be (1+n) times as big as the number of people in Young 1, and the number of people in Old 1 equals the number of people in Young 1.
+Consider a 2-period overlapping generations structure. There is one perishable (non-storable) good. Each generation is $(1+n)$ times as big as the previous one with the relation $ N_(t+1) = (1+n) N_t, $ where $N_t$ is the size of generation $t,$ $N_0 = 1.$ Take @olg_two_period_OLG for example, the number of people in Young 2 will be $(1+n)$ times as big as the number of people in Young 1, and the number of people in Old 1 equals the number of people in Young 1.
 
-In addition, we assume that all individuals have the utility function $U$ over young-age consumption $c^y$ and old-age consumption $c_o$ with 
+In addition, we assume that all individuals have the utility function $U$ over young-age consumption $c^y$ and old-age consumption $c^o$ with 
 $
   U(c^y, c^o) = u(c^y) + beta dot.c u(c^o),
 $
@@ -935,21 +935,201 @@ which implies
 $
   p_t m_t = f(p_(t+1)/(p_t))
 $
-for some function $f.$
+for some function $f.$ This money demend function $f$ is a saving function.
 
-Hence, the demand-supply equilibrium at date $t$ required
+The demand-supply equilibrium at date $t$ requires the total money demend equals the total money supply, i.e., 
+$
+  underbrace(p_t dot.c M, "total supply") &= underbrace(N_t dot.c p_t dot.c m_t, "total demend")\
+  &= underbrace(N_0, 1) dot.c (1+n)^t dot.c f(p_(t+1)/p_t)\
+  &= (1+n)^t dot.c f(p_(t+1)/(p_t)).
+$ <olg_ds_eq_t>
+Similarly, the demand-supply equilibrium at date $t+1$ requires
+$
+  p_(t+1) dot.c M = (1+n)^(t+1) dot.c f(p_(t+2)/p_(t+1)).
+$ <olg_ds_eq_t_plus_1>
+
+#newpar Consider a steady state when $display(p_(t+1)/(p_t)) = 1 + r$ for all $t.$ Then, @olg_ds_eq_t_plus_1 devided by @olg_ds_eq_t yields $ 1+r = 1+n. $ The only possible equilibrium real interest rate (rate of return on money) is the population growth rate!
+
+If $display(p_(t+1)/(p_t)) = 1 + n$ for all $t$ and $p_0$ is determined by $p_0 M = f(1+n),$ then supply-demand will be ensured at all dates on the money market (or equivalently consumption-goods), and the equilibrium is also welfare-maximizing for all generations: money restores optimiality, as it restores inter-generational trade. Notice that, however, you need to be certain that future generations will all accept money as a means of savings.
+
+We talked about money (non-productive) a lot in this section. What about an economy with a productive asset?
 
 == The Diamond Model
 
-// === Setup
+Consider a 2-period overlapping-generation model with population growth rate $n>0,$ and size of the cohort at time $t$ is $L_t = (1+n)^t L_0.$ The initial old (born at $t=-1$) are each endowed with capital $overline(k).$ Consumers born at date $t$ will have the utility
+$
+ U(sub(c^y, t), sub(c^o, t+1)) = u(sub(c^y, t))+beta dot.c u(sub(c^o, t+1)). 
+$
+The young has $1$ unit of labor, and the old has $0.$ The young earns competitive wage $w_t,$ consumes $sub(c^y, t),$ and saves $s_t$ in the form of capital. Also, the young earns competitive interest rate $r_(t+1)$ on $s_t,$ consumes $sub(c^o, t+1)=(1+r_(t+1)) dot.c s_t$ when old. We assume that capital does not depreciate.
+
+The production function is $F(K, L),$ of which firms operate competitively. We assume that $F$ is beautiful enough; that is, $F in C^2,$ is homogeneous of degree 1, is strictly increasing in $K$ and $L,$ and satisfies the Inada condition. The intensive form of $f$ also satisfies $f ''<0$ and $f '>0.$
+
+Date-$t$ capital stock $K_t$ is made of the savings of the old date $t$: 
+$
+  K_t = s_(t-1)L_(t-1) " for " t >= 1, quad " and " K_0 = overline(k) L_(-1).
+$
 
 === The Optimal Steady State
 
+We first consider the problem of a *benevolent sovial planner* who chooses the levels of conusmption of each generation and of capital stock. The planner wants to provide the next generation with the same possibilities. To be more precise, $n k_t$ capital must be accumulated at each period, so that the capital-labor ratio $display(K_t/L_t)$ will be constant for all $t.$ That is to say, the social planner has $0$ discount rate, who values only the steady-state level well-being. 
+
+Hence, the optimization problem becomes to find 
+$
+  max_(c^y, c^o, k) U(c^y, c^o)
+$ <olg_optimal_steady_state_maximizee>
+under the constraint
+$
+  F(K, L) = L c^y + L/(1+n) dot.c c^o + n K,
+$ <olg_optimal_steady_state_bc_original>
+where $+ n K$ is to maintain the capital-labor ratio.
+
+We can simplify @olg_optimal_steady_state_bc_original to make the intensive form appear, having 
+$
+  F(K, L) &= L c^y + L/(1+n) dot.c c^o + n K\
+  F(k, 1) &= c^y + c^o/(1+n) + n k\
+  f(k) - n k &= c^y + c^o/(1+n).
+$ <olg_optimal_steady_state_bc>
+
+#newpar The problem has two components: maximizing the net output $f(k) - n k$ with respect to $k$ and maximizing $U$ under the budget constraint.
+
+We first maximize the net output. It is clear that we have 
+$
+  f '(star(k)) = n. 
+$ <olg_optimal_steady_state_net_output>
+
+#newpar We can now maximize $U$ under @olg_optimal_steady_state_bc with @olg_optimal_steady_state_net_output, having that the optimal consumption bundle $(star(c^y), star(c^o))$ will satisfy 
+$
+  diff(, c^y)(u(c^y)+beta dot.c u(c^o)) &= 0\
+  ==> #hide($(-)$) u '(star(c^y)) + beta dot.c u '(star(c^o)) dot.c diff(, c^y)((1+n) dot.c (f(star(k)) - n star(k) - c^y)) &= 0\
+  ==> #hide($diff(, c^y)(() dot.c (f(star(k)) - n star(k) - c^y))$) u '(star(c^y)) + beta dot.c u '(star(c^o)) dot.c (-1-n) &= 0\
+  ==> #hide($diff(, c^y)((1+n) dot.c (f(star(k)) - n star(k) - c^y)) + beta dot.c u '(star(c^o)) dot.c (-)$) u '(star(c^y)) &=  beta dot.c (1+n) dot.c u '(star(c^o)).
+$ <olg_optimal_steady_state_condition>
+
 === Decentralized dynamics
+
+We now turn to the actual equilibrium, also known as the _decentralized dynamics._ We want to know what happens when the market work freely.
+
+The competitive wage rate and interest rate are given by the condition that $ w_t = sub("MP"_L, t) quad "and" quad r_t = sub("MP"_K, t). $ We can compute such by manipulating a coefficient, having
+$
+  pdiff(, L) F(K, L) &= pdiff(, L) L dot F(K/L, 1)\
+  &= pdiff(, L) L dot f(k)\
+  &= f(k) + L dot.c f '(k) dot.c pdiff(k, L)\
+  &= f(k) + L dot.c f '(k) dot.c (-K/L^2)\
+  &= f(k) - k dot.c f '(k)
+$
+and 
+$
+  pdiff(, K) F(K, L) &= pdiff(, K) L dot f(k)\
+  &= L dot.c f '(k) dot.c pdiff(k, K)\
+  &= f '(k).
+$
+#newpar Hence, we have 
+$
+  w_t = f(k_t) - k_t dot.c f '(k_t) quad "and" quad r_(t+1) = f '(k_(t+1)).
+$
+Then, the price-taking agents want to find
+$
+  max_(sub(c^y, t), sub(c^o, t+1)) U(sub(c^y, t), sub(c^o, t+1))
+$ <olg_decentralized_dynamics_maximizee>
+under the constraint
+$
+  sub(c^y, t) + sub(c^o, t+1)/(1+r_(t+1)) = w_t.
+$ <olg_decentralized_dynamics_bc>
+We just need to solve
+$
+  diff(, sub(c^o, t+1))(u(sub(c^y, t)) + beta dot.c u(sub(c^o, t+1))) &= 0\
+  ==> quad u '(sub(c^y, t)) dot.c diff(sub(c^y, t), sub(c^o, t+1)) + beta dot.c u '(sub(c^o, t+1)) &= 0\
+  ==> quad #hide($display(u '(sub(c^y, t)) dot.c diff(sub(c^y, t), sub(c^o, t+1))+)$) beta dot.c u '(sub(c^o, t+1)) &= (u '(sub(c^y, t)))/(1+r_(t+1))\
+  ==> quad #hide($display(u '(sub(c^y, t)) dot.c diff(sub(c^y, t), sub(c^o, t+1))+beta_(+1) dot.c)$) u '(sub(c^y, t)) &= beta dot.c (1+r_(t+1)) dot.c u '(sub(c^o, t+1))\
+  ==> quad #hide($display(u '(sub(c^y, t)) dot.c diff(sub(c^y, t), sub(c^o, t+1))+ dot.c)$) u '(w_t - s_t) &= beta dot.c (1+r_(t+1)) dot.c u '((1+r_(t+1))dot.c s_t)
+$ 
+in which $w_t$ and $r_(t+1)$ will determine a saving function 
+$
+  s_t = arg max_s_t U(w_t - s_t, (1+r_(t+1) dot.c s_t)):=s(w_t, r_(t+1)).
+$
+
+The model's dynamics are summarized by a sequence $(k_t)_(t = 0).$ The sequence $(k_t)_(t = 0)$ is an equilibrium sequence of capital-labor ratios if and only if 
+$ 
+  K_(t+1)/L_(t+1) = s_t L_t qquad ==> qquad k_(t+1) &= s_t/(1+n)\
+  &= (s(f(k_t) - k_t dot.c f '(k_t), f '(k_(t+1))))/(1+n).
+$
+
+Date-$t$ savings must be consistent with date-$t$ wages and date-$(t+1)$ interest rate, or there might be no equilibrium.
+
+Note worthy that if $u=ln,$ then $s$ does not depend on $f '(k_(t+1)).$
 
 === Decentralized Steady State
 
+Suppose there is a steady-state capital-labor ratio $hat(k),$ i.e., 
+$
+  hat(k) = (s(f(hat(k)) - k_t dot.c f '(hat(k)), f '(hat(k))))/(1+n),
+$
+where $hat(k)$ is determined by preferences (saving rate $s$), technology (intensive form $f$), and demography (population growth rate $n$).
+
+We can now state a central theorem on overlapping-generation models about the steady-state interest rate.\
+#box(width: 1fr, stroke: 1pt + black, inset: (x: 12pt, top: 14pt, bottom: 12pt))[
+  *Theorem*. Let $hat(r)=f '(hat(k))$ be the steady-state interest rate. If $hat(r)<n,$ then the decentralized steady state is dynamically inefficient, i.e., it is possible to increase the welfare of all generations. If $hat(r)>n,$ then the decentralized steady state is dynamically efficient, i.e., it is not possible to strictly increase the welfare of some generation without strictly decreasing the welfare of another generation.
+]\
+*Proof*. Suppose $hat(r)<n.$ Let $epsilon>0.$ Let every young transter $epsilon$ to the old, so that each old receives $(1+n) epsilon.$ This will benefit all generations since the market price of $c^o$ at steady state is $ 1/(1+hat(r)), $ which is greater than $display(1/(1+n))$: the consumer gets more utility by having access to a small amount of $c^o$ at less-than-market price. Suppose $hat(r)>n.$ That is, the case of capital under-accumulation. Then, any policy will hurt at least one generation: intra-period or inter-generational trade hurts at least some generation, and forced capital accumulation hurts the current generation. #qqed
+
+This should last forever, or the very last generation will be hurt. It is similar to the pension system, which left the young pay some for the old.
+
+To illustrate graphically, see the following figures.
+
+#figure(
+  caption: [Illustration about the Central Theorem],
+  kind: "image",
+  supplement: [Figure]
+)[
+  #table(
+    columns: (1fr, 1fr, 1fr, 1fr),
+    stroke: 0pt,
+    column-gutter: -10.4em,
+    row-gutter: -10pt,
+    table.cell(inset: (bottom: 20pt))[], [$t = t_0$], [$t_0 + 1$], [$t_0 + 2$],
+    [#box(stroke: none, inset: 10pt, width: 8em, [$qquad$])], [#box(stroke: 1pt + gray, inset: 10pt, width: 8em, [Old $t_0-1$])], [], [],
+    [#box(stroke: none, inset: 10pt, width: 8em, [$"Gen." t_0$])], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Young $t_0$])], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Old $t_0$])], [],
+    [#box(stroke: none, inset: 10pt, width: 8em, [$t_0+1$])], [], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Young $t_0+1$])], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Old $t_0+1$])],
+    [#box(stroke: none, inset: 10pt, width: 8em, [$t_0+2$])], [], [], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Young $t_0+2$])],
+  )
+  #table(
+    columns: (1fr, 1fr, 1fr, 1fr),
+    stroke: 0pt,
+    column-gutter: -10.4em,
+    row-gutter: -10pt,
+    table.cell(inset: (bottom: 20pt))[], [$t = t_0$], [$t_0 + 1$], [$t_0 + 2$],
+    [#box(stroke: none, inset: 10pt, width: 8em, [$qquad$])], [#box(stroke: 1pt + gray, inset: 10pt, width: 8em, [Gets $(1+n)epsilon$])], [], [],
+    [#box(stroke: none, inset: 10pt, width: 8em, [$"Gen." t_0$])], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Lost $epsilon$ ($arrow.t$)])], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Old $t_0$])], [],
+    [#box(stroke: none, inset: 10pt, width: 8em, [$t_0+1$])], [], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Young $t_0+1$])], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Old $t_0+1$])],
+    [#box(stroke: none, inset: 10pt, width: 8em, [$t_0+2$])], [], [], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Young $t_0+2$])],
+  )
+  #table(
+    columns: (1fr, 1fr, 1fr, 1fr),
+    stroke: 0pt,
+    column-gutter: -10.4em,
+    row-gutter: -10pt,
+    table.cell(inset: (bottom: 20pt))[], [$t = t_0$], [$t_0 + 1$], [$t_0 + 2$],
+    [#box(stroke: none, inset: 10pt, width: 8em, [$qquad$])], [#box(stroke: 1pt + gray, inset: 10pt, width: 8em, [Gets $(1+n)epsilon$])], [], [],
+    [#box(stroke: none, inset: 10pt, width: 8em, [$"Gen." t_0$])], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Lost $epsilon$ ($arrow.t$)])], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Gets $(1+n)epsilon$])], [],
+    [#box(stroke: none, inset: 10pt, width: 8em, [$t_0+1$])], [], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Lost $epsilon$ ($arrow.t$)])], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Old $t_0+1$])],
+    [#box(stroke: none, inset: 10pt, width: 8em, [$t_0+2$])], [], [], [#box(stroke: 1pt + black, inset: 10pt, width: 8em, [Young $t_0+2$])],
+  )
+]
+
+You can see that everyone (each generation) is better-off since 
+$
+  -epsilon + (1+n) epsilon > -epsilon + (1+hat(r))epsilon.
+$
+
 === Public Debt
+
+We first talk about the external debt.
+
+
+
+
+
+
 
 
 // Appendix
