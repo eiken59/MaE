@@ -1758,7 +1758,9 @@ _Remark_. There should be some content below about public debt. However, it is t
     *Solution*.
   + We consider now a "fully-funded" pension system: at each date $t,$ the government collects lump-sum taxes $tau_t$ from the young agents. The tax receipts are invested in physical capital and returned to the old generation the next period. The old at $t+1$ then get $(1+r_(t+1))tau_t$ with $0 <= tau_t < star(s_t),$ where $star(s_t)$ is the saving desired by the individuals born at time $t$ in the absence of the pension system.
 
-    How will the capital stock be affected by this pension system?
+    How will the capital stock be affected by this pension system?\
+    *Solution*.
   + We consider now a "pay-as-you-go" pension system: at each date $t,$ the government collects lump-sum taxes $tau_t$ from the young agents. The tax reciepts are transferred to the old who are alive at date $t;$ hence every old at date $t$ gets $(1+n) tau_t.$ Assume that the lump-sum tax per worker is constant: $tau_t = tau$ for all $t,$ and that it is lower than the wage rate $w_t$ at all dates.
 
-    How will the capital stock be affected by this pension system, on impact (quualitatively)? What will happen over time?
+    How will the capital stock be affected by this pension system, on impact (quualitatively)? What will happen over time?\
+    *Solution*.
