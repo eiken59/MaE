@@ -833,7 +833,7 @@ The _overlapping-generations_ structure is one central demographic structure in 
 
 The assumption of overlapping generations implies that at each date, different generations of individuals, of various ages, coexist. One period after, the oldest people die, the young gets older, and a new generation comes up.
 
-Why do we study overlapping-generations models? In reality, generations do overlap: people are born and do die. This is a natural framwork of analysis for inter-generational issues:
+Why do we study overlapping-generations models? In reality, generations do overlap: people are born and do die. This is a natural framework of analysis for inter-generational issues:
 - causes and implications of life-cycle behavior,
 - pension systems (fully-funded vs. pay-as-you-go),
 - public dept,
@@ -841,7 +841,7 @@ Why do we study overlapping-generations models? In reality, generations do overl
 
 #newpar
 
-Simple overlapping-generations models generate new and important insites on inter-generational dynamics and welfare.
+Simple overlapping-generations models generate new and important insights on inter-generational dynamics and welfare.
 
 However, market equilibrium can be Pareto-suboptimal in overlapping-generations models even seemingly without any market distortion (imperfect competition, moral hazard, adverse selection, etc.). More importantly, we have a conclusion that the demographic structure itself can lead to some inefficiency.
 
@@ -914,7 +914,7 @@ The credit market cannot function on a bilateral basis under 2-period overlappin
 
 === Remedy
 
-Imagine that there exists an agree-on in fixed quantity $M$ (say gold or usless paper "money"), initially held by the old of date $t=0.$
+Imagine that there exists an agree-on in fixed quantity $M$ (say gold or useless paper "money"), initially held by the old of date $t=0.$
 
 Suppose that the old and every future generation believe they will be able to buy and sell money at price $p_t$ in period $t$ in terms of goods.
 
@@ -935,9 +935,9 @@ which implies
 $
   p_t m_t = f(p_(t+1)/(p_t))
 $
-for some function $f.$ This money demend function $f$ is a saving function.
+for some function $f.$ This money demand function $f$ is a saving function.
 
-The demand-supply equilibrium at date $t$ requires the total money demend equals the total money supply, i.e., 
+The demand-supply equilibrium at date $t$ requires the total money demand equals the total money supply, i.e., 
 $
   underbrace(p_t dot.c M, "total supply") &= underbrace(N_t dot.c p_t dot.c m_t, "total demend")\
   &= underbrace(N_0, 1) dot.c (1+n)^t dot.c f(p_(t+1)/p_t)\
@@ -948,9 +948,9 @@ $
   p_(t+1) dot.c M = (1+n)^(t+1) dot.c f(p_(t+2)/p_(t+1)).
 $ <olg_ds_eq_t_plus_1>
 
-#newpar Consider a steady state when $display(p_(t+1)/(p_t)) = 1 + r$ for all $t.$ Then, @olg_ds_eq_t_plus_1 devided by @olg_ds_eq_t yields $ 1+r = 1+n. $ The only possible equilibrium real interest rate (rate of return on money) is the population growth rate!
+#newpar Consider a steady state when $display(p_(t+1)/(p_t)) = 1 + r$ for all $t.$ Then, @olg_ds_eq_t_plus_1 divided by @olg_ds_eq_t yields $ 1+r = 1+n. $ The only possible equilibrium real interest rate (rate of return on money) is the population growth rate!
 
-If $display(p_(t+1)/(p_t)) = 1 + n$ for all $t$ and $p_0$ is determined by $p_0 M = f(1+n),$ then supply-demand will be ensured at all dates on the money market (or equivalently consumption-goods), and the equilibrium is also welfare-maximizing for all generations: money restores optimiality, as it restores inter-generational trade. Notice that, however, you need to be certain that future generations will all accept money as a means of savings.
+If $display(p_(t+1)/(p_t)) = 1 + n$ for all $t$ and $p_0$ is determined by $p_0 M = f(1+n),$ then supply-demand will be ensured at all dates on the money market (or equivalently consumption-goods), and the equilibrium is also welfare-maximizing for all generations: money restores optimality, as it restores inter-generational trade. Notice that, however, you need to be certain that future generations will all accept money as a means of savings.
 
 We talked about money (non-productive) a lot in this section. What about an economy with a productive asset?
 
@@ -971,7 +971,7 @@ $
 
 === The Optimal Steady State
 
-We first consider the problem of a *benevolent sovial planner* who chooses the levels of conusmption of each generation and of capital stock. The planner wants to provide the next generation with the same possibilities. To be more precise, $n k_t$ capital must be accumulated at each period, so that the capital-labor ratio $display(K_t/L_t)$ will be constant for all $t.$ That is to say, the social planner has $0$ discount rate, who values only the steady-state level well-being. 
+We first consider the problem of a *benevolent social planner* who chooses the levels of consumption of each generation and of capital stock. The planner wants to provide the next generation with the same possibilities. To be more precise, $n k_t$ capital must be accumulated at each period, so that the capital-labor ratio $display(K_t/L_t)$ will be constant for all $t.$ That is to say, the social planner has $0$ discount rate, who values only the steady-state level well-being. 
 
 Hence, the optimization problem becomes to find 
 $
@@ -1070,7 +1070,7 @@ We can now state a central theorem on overlapping-generation models about the st
 #box(width: 1fr, stroke: 1pt + black, inset: (x: 12pt, top: 14pt, bottom: 12pt))[
   *Theorem*. Let $hat(r)=f '(hat(k))$ be the steady-state interest rate. If $hat(r)<n,$ then the decentralized steady state is dynamically inefficient, i.e., it is possible to increase the welfare of all generations. If $hat(r)>n,$ then the decentralized steady state is dynamically efficient, i.e., it is not possible to strictly increase the welfare of some generation without strictly decreasing the welfare of another generation.
 ]\
-*Proof*. Suppose $hat(r)<n.$ Let $epsilon>0.$ Let every young transter $epsilon$ to the old, so that each old receives $(1+n) epsilon.$ This will benefit all generations since the market price of $c^o$ at steady state is $ 1/(1+hat(r)), $ which is greater than $display(1/(1+n))$: the consumer gets more utility by having access to a small amount of $c^o$ at less-than-market price. Suppose $hat(r)>n.$ That is, the case of capital under-accumulation. Then, any policy will hurt at least one generation: intra-period or inter-generational trade hurts at least some generation, and forced capital accumulation hurts the current generation. #qqed
+*Proof*. Suppose $hat(r)<n.$ Let $epsilon>0.$ Let every young transfer $epsilon$ to the old, so that each old receives $(1+n) epsilon.$ This will benefit all generations since the market price of $c^o$ at steady state is $ 1/(1+hat(r)), $ which is greater than $display(1/(1+n))$: the consumer gets more utility by having access to a small amount of $c^o$ at less-than-market price. Suppose $hat(r)>n.$ That is, the case of capital under-accumulation. Then, any policy will hurt at least one generation: intra-period or inter-generational trade hurts at least some generation, and forced capital accumulation hurts the current generation. #qqed
 
 This should last forever, or the very last generation will be hurt. It is similar to the pension system, which left the young pay some for the old.
 
@@ -1121,7 +1121,7 @@ $
   -epsilon + (1+n) epsilon > -epsilon + (1+hat(r))epsilon.
 $
 
-_Remark_. There should be some content below about public debt. However, it is too complicated for me to understand, and Dr. Senouci said we should consider those off-program. Hence, there is no content about this topic.
+_Remark_. There should be some content below about public debt. However, it is too complicated for me to understand, and Dr. SENOUCI said we should consider those off-program. Hence, there is no content about this topic.
 
 // I really cannot figure out about the following parts about public debt.
 // Dr. Senouci: Consider this off-program.
@@ -1628,7 +1628,7 @@ _Remark_. There should be some content below about public debt. However, it is t
       $
         tilde(C_1) + C_2 + C_3 = W.
       $ <pc_consumption_3_a_ii_bc>
-      Hence, we substitude $C_3$ by $W-tilde(C_1)-C_2$ in @pc_consumption_3_a_ii_maximizee and have 
+      Hence, we substitute $C_3$ by $W-tilde(C_1)-C_2$ in @pc_consumption_3_a_ii_maximizee and have 
       $
         U_2(C_2, C_3) &= U_2(C_2, W-tilde(C_1)-C_2)\
         &= ln tilde(C_2) + beta dot.c ln (W-tilde(C_1)-C_2).
@@ -1699,9 +1699,9 @@ _Remark_. There should be some content below about public debt. However, it is t
 
 == Overlapping-Generations Models
 
-+ We consider a 3-period overlapping-generations model, where individuals born at date some date $t$ are first "Young," then "Adult," then "Old." Successive cohorts gorw at rate $n > -1.$ There is only one good. The young and the adult is endowed with $1$ unit of that good, and the old is endowed with none. Hence, lifetime endowment can be written $(1, 1, 0).$ All individuals have the same utility function over consumption at the three ages: $ U(C_1, C_2, C_3) = u(C_1) + beta dot.c u(C_2) + beta^2 dot.c u(C_3), $ where $u$ is a strictly increasing and strictly concave function and $beta in (0, 1).$
++ We consider a 3-period overlapping-generations model, where individuals born at date some date $t$ are first "Young," then "Adult," then "Old." Successive cohorts grow at rate $n > -1.$ There is only one good. The young and the adult is endowed with $1$ unit of that good, and the old is endowed with none. Hence, lifetime endowment can be written $(1, 1, 0).$ All individuals have the same utility function over consumption at the three ages: $ U(C_1, C_2, C_3) = u(C_1) + beta dot.c u(C_2) + beta^2 dot.c u(C_3), $ where $u$ is a strictly increasing and strictly concave function and $beta in (0, 1).$
   + The real interest rate between dates $tau$ and $tau + 1$ is $r_(tau + 1).$ We call $R_(tau + 1) = display(1 / (1 + r_(tau + 1)))$ the associated (objective) discount factors. Set the problem of a consumer born at some time date $t$ without solving it.
-  + Call $(C_1(R_(t+1), R_(t+2)), C_2(R_(t+1), R_(t+2)), C_3(R_(t+1), R_(t+2)))$ the solution to the maximization problem in the previous question. Prove that some sequence of real interest rates constitude a general, intertemporal equilibrium if and only if 
+  + Call $(C_1(R_(t+1), R_(t+2)), C_2(R_(t+1), R_(t+2)), C_3(R_(t+1), R_(t+2)))$ the solution to the maximization problem in the previous question. Prove that some sequence of real interest rates constitute a general, intertemporal equilibrium if and only if 
     $
       1 + 1/(1+n) = C_1(R_(t+1), R_(t+2)) + 1/(1+n) dot.c C_2(R_(t+1), R_(t+2)) + 1/(1+n)^2 dot.c C_3(R_(t+1), R_(t+2)).
     $
@@ -1717,11 +1717,11 @@ _Remark_. There should be some content below about public debt. However, it is t
     Interpret this problem. Prove that the equilibrium  obtained in question c reaches the maximum sustainable level of welfare for all generations.
   + Draw a picture representing all the flows of goods that go with the credit market. One should consider the case where the young and the adults save, i.e., $C_1< 1$ and $C_2<1$ at the $r=n$ equilibrium.
   + Imagine now people have to lend to each other on a bilateral basis, hence need to meet twice for any credit contract. We assume that $n=0, u = ln,$ and $beta = 1.$ An agent born at date $t$ will
-    - incur debt $R dot.c v_d$ when young and reimbruses $v_d$ when adult, and
-    - lend $R dot.c v_ell$ when adult and get reimbrusement $v_ell$ when old.
+    - incur debt $R dot.c v_d$ when young and reimburses $v_d$ when adult, and
+    - lend $R dot.c v_ell$ when adult and get reimbursement $v_ell$ when old.
     Let $R = display(1/(1+r))>0$ be some fixed discount rate. Write and solve the agent's problem, i.e., find optimal values of $u_d$ and $u_ell$ as functions of $R.$
   + What is the equilibrium value of $R$ in the economy with only bilateral credit?
-+ Consider the following overlapping-generations model (baseline Diamond in 1965). Angents live for two periods. An agent born at date $t >= 0$ has no initial wealth and is endowed with $1$ unit of labor that one rents on the labor market in exchange for real wage $w_t.$ All agents have utility $U$ over young-age consumption $sub(c^y, t)$ and old-age consumption $sub(c^o, t+1)$ with 
++ Consider the following overlapping-generations model (baseline Diamond in 1965). Agents live for two periods. An agent born at date $t >= 0$ has no initial wealth and is endowed with $1$ unit of labor that one rents on the labor market in exchange for real wage $w_t.$ All agents have utility $U$ over young-age consumption $sub(c^y, t)$ and old-age consumption $sub(c^o, t+1)$ with 
   $
     U(sub(c^y, t), sub(c^o, t+1)) = ln (sub(c^y, t)) + beta dot.c ln (sub(c^o, t+1)),
   $
@@ -1760,7 +1760,7 @@ _Remark_. There should be some content below about public debt. However, it is t
 
     How will the capital stock be affected by this pension system?\
     *Solution*.
-  + We consider now a "pay-as-you-go" pension system: at each date $t,$ the government collects lump-sum taxes $tau_t$ from the young agents. The tax reciepts are transferred to the old who are alive at date $t;$ hence every old at date $t$ gets $(1+n) tau_t.$ Assume that the lump-sum tax per worker is constant: $tau_t = tau$ for all $t,$ and that it is lower than the wage rate $w_t$ at all dates.
+  + We consider now a "pay-as-you-go" pension system: at each date $t,$ the government collects lump-sum taxes $tau_t$ from the young agents. The tax receipts are transferred to the old who are alive at date $t;$ hence every old at date $t$ gets $(1+n) tau_t.$ Assume that the lump-sum tax per worker is constant: $tau_t = tau$ for all $t,$ and that it is lower than the wage rate $w_t$ at all dates.
 
-    How will the capital stock be affected by this pension system, on impact (quualitatively)? What will happen over time?\
+    How will the capital stock be affected by this pension system, on impact (qualitatively)? What will happen over time?\
     *Solution*.
