@@ -1121,7 +1121,7 @@ $
   -epsilon + (1+n) epsilon > -epsilon + (1+hat(r))epsilon.
 $
 
-_Remark_. There should be some content below about public debt. However, it is too complicated for me to understand, and Dr. SENOUCI said we should consider those off-program. Hence, there is no content about this topic.
+_Remark_. There should be some content about public debt in the original following section. However, it is too complicated for me to understand, and Dr. SENOUCI said we should consider those off-program. Hence, there is no content about this topic.
 
 // I really cannot figure out about the following parts about public debt.
 // Dr. Senouci: Consider this off-program.
