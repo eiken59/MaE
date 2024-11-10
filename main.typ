@@ -1154,16 +1154,172 @@ _Remark_. There should be some content about public debt in the original followi
 
 // == Introduction and History
 
+In 1937, Hicks developed the IS-LM framework to formalize Keynes' ideas. The four letters are the first letter of investment, saving, liquidity preference, and money supply, respectively. In short, this model represents equilibrium in the goods (IS) and money (LM) markets.
+
+Hicks interpreted Keynes within a general equilibrium framework: short-run macroeconomic equilibrium with *weak aggregate demand* and unemployment and emphasize of the role of interest rates in balancing investment and savings. This interpretation allowed Keynesian thought to be integrated into neoclassical economics.
+
+In classical view of general equilibrium, markets are naturally clear through price adjustments, and full employment is achieved as long as wages and prices are flexible. However, Keyens' general theory rejects the idea that markets are always clear. This is because in the short run, wages and prices can be rigid, which lead to unemployment and output gaps $y^d-y^n,$ where $y^d$ is the output demanded, and $y^n$ is the natural market demanded.
+
+This model focuses on how output is determined in the short run. It looks at two things:
+- the aggregated damand and its main compoments,
+- money market and the role of interst rates.
+
+#newpar
+
+The IS-LM model helps illustrate how stabilization policies (such as fiscal or monetary policy) can be used to influence the economy, aiming to stabilize output and employment levels.
+
+In addition, it serves as a tool for analyzing the impact of fisical (government spending and taxation) and monetary (interest rate adjustments by the central bank) policies on the economy, and it helps illustrate the trade-offs policymakers face, such as the impact of monetary expansion on interest rates and investment.
+
+As mentioned, we would like to find equilibria on the goods and money markets. This is a static model, so that time does not play an important role. We assume the following:
+- economy consists of households, firms, and the government,
+- a single homogeneous good $Y$ is produced by perfectly competitive firms and consumed by households,
+- (_normal rigidities_) prices are *fixed*, so that the firms are ready to supply any amount of $Y$ at the given price level $P,$ and
+- (_closed economy_) there is no international trade in goods or assets.
+
 == The Goods Market
+
+The IS curve represents the goods markets. The planned aggregate expenditures $"AE"_p$ consist of
+- consumption $C$: goods and services bought by households,
+- investment $I$: spending on the acquisition of capital by firms, and
+- government spending $G.$
+
+Hence, the goods market equilibrium conditions requires, from the demand side, $ C+I+G=Y, $ where $C+I+G="AE"_p.$ The *actual* expenditures are *always* equal to the income because every dollar spend by a buyer becomes income to the seller. Therefore, the equilibrium requires $ "AE"_"actual" = Y = "AE"_p. $
+
+=== Consumption
+
+The consumption $C$ is positively depending on disposable income $Y-T,$ where $T$ are net taxes. We will write $ C = C(Y-T), $ where the derivative of $C$ is called the marginal propensity to consume (MPC). The marginal propensity to consume $C '$ is a positive decimal, and it measures how much out of one extra unit of income if spent on consumption. We can assume a specific functional form: linear consumption function 
+$ 
+  C(Y-T) = C_0 + c_y dot (Y-T), 
+$ <islm_consumption_linear>
+where $C_0$ is the incompressible consumption refers to the minimum level of consumption that households need to maintain, and $c_y$ is the marginal propensity to consume.
+
+=== Investment
+The investment is negatively depending on the interest rate $r$ $ I = I(r) $ with $diff(I, r) < 0.$ The intuition is that firms' borrowing costs rise when $r$ increases, which makes it less profitable to invest, and with other conditions remaining the same. We can do something similar as we do in @islm_consumption_linear, to assume a specific linear investment function 
+$
+  I(r) = I_0 - i_r dot r,
+$ <islm_investment_linear>
+where $i_r$ measures interest sensitivety of investment demand by how much investment falls if $r$ increases by $1$ percentage point.
+
+=== Government Spending and Taxation
+
+The two parameters $G$ and $T$ are assumed to be exogenously fixed. We have other possibilities as well. For example, 
+- balanced budget $G=T,$
+- procyclical expenditures $G'(Y)>0$ or $T'(Y)>0,$ or
+- countercyclical expenditures $G'(Y)<0$ or $T'(Y)<0.$
+
+Taxes $T$ can be lump-sum or proportional. The linear form of taxation is 
+$
+  T(Y) = T_0 + t_y dot Y,
+$ <islm_tax_linear>
+where $T_0$ is lump-sum tax, and $t_y$ is the rate for proportional tax.
+
+The IS curve is the locus showing all combinations of $Y$ and $r$ such that the goods market is in equilibrium. In the linear economy, this gives us a negative relation between $r$ and $Y$ By
+$
+  Y &= C+I+G\
+  &= C_0 + c_y dot (Y-T) + I_0 - i_r dot r + G\
+  ==> quad Y &= -i_r/(1-c_y) dot r + (C_0 - c_y dot T - I_0 + G)/(1-c_y).
+$ <islm_is_Y_r>
+
+The intuition of @islm_is_Y_r is that an increase in $r$ leads a decrease in investment, which leads a decrease in $"AE"_p$; as a result, $Y$ decreases.
+
+Note that when we are drawing an IS curve, we will put $Y$ to be the horizonal axis and $r$ to be the vertical axis, which is the contrary to the form of @islm_is_Y_r.
 
 == The Money Market
 
+The LM curve represents the money market. We assume that there are two financial assets in the economy: money and bonds. Money does not pay interest and is more liquid (immediate); bonds pay a nomial interest $i>0$ an is less liquid. Also, we have two motives for holding cash: transactions (depends on $Y$) and specilative (depends on $i$). Is is assumed that there is no money illusion, i.e., money is valued for its purchasing power.
+
+We set the demand for real money balances is given by $ M^D/P = L(Y, i) $ for some function $L,$ with $M^D$ the demand for money. More income raises the need for more transactions $pdiff(L, Y)>0;$ interest rate $i$ is the opportunity cost of holding cash $pdiff(L, i)<0.$ We can again use linear form to assume a particular form 
+$
+  L(Y, i) = L_0 + I_y dot Y - I_i dot i,
+$ <islm_demand_money_linear>
+where $L_0$ is the autonomous money demand, $I_y$ is the income sensitivity of money demand, and $I_r$ is the interest sensitivety of money demand.
+
+The real money supply is assumed to be exogenously fixed at $display(M^S/P).$ Since the price level $P$ is fixed, supply of real money balances $display(M^S/P)$ is independent of $Y$ and $r.$ Here we also assume that real and nominal rates are equal.
+
+In practice in modern monetary system, money supply is controlled by the central bank and is fixed in the short run.
+
+The LM curve is the locus showing all combinations of $Y$ and $r$ such that the money market is in equilibrium, i.e., $ M^D/P = M^S/P. $ In a linear economy, this is a positive relation between $r$ and $Y$ since 
+$
+  M^S/P &= M^D/P\
+  &= L(Y, i)\
+  &= L_0 + I_y dot Y - I_i dot i\
+  &= L_0 + I_y dot Y - I_i dot r\
+  ==> doub quad r &= I_Y/I_i dot Y + (L_0 - M^S\/P)/I_i.
+$ <islm_lm_Y_r>
+
 == Equilibrium in the IS-LM model
+
+Both IS and LM are in partial equilibrium for given $r$ or $Y.$ When both goods are markets are in equilibrium, there will be a unique pair $(star(r), star(Y))$ solving the system $ cases(Y = C(Y-T) + I(r) + G\,, L(Y, r) = M^S/P\,) $ corresponds to the equilibrium in the IS-LM model. That pair is exactly the intersection of the IS and the LM curves.
 
 == Policy
 
+In this framework, we can analyze the government policy. The aim is to stablize output $Y$ around its "natural" or *full-employment* (also called *potential*) level $Y^p.$ We can see policies with different aspects:
+- expansionary (increasing $Y$) or contractionary (decreasing $Y$),
+- fiscal or monetary.
 
+For fiscal policies, we have government spendings $G$ and taxations $T.$ Fisical policy shifts the IS curve: either direct (of $G$) or indirect (of $T,$ through change in $C$) impact on aggregated demand. Recall @islm_is_Y_r. 
 
+For monetary policies, we have open-market operations (affecting $M^S$) and discount window (affecting $r$). Monetary policy shifts the LM curve: the change in $M^S$ shifts the vertical money supply curve $display(M^D/P = M^S/P),$ and hence for any $Y,$ the interest rate $r$ equilibrating the money market changes.
+
+To access the overall effect of a policy, one needs to compute the magnitude of the *policy multiplier*, which is the change in output $Delta Y$ per given change in $G, T, "or" M^S.$
+
+We combine @islm_is_Y_r and @islm_lm_Y_r to have the compact system 
+$
+  cases(
+    r &= display(I_Y/I_i) dot Y + display((L_0 - M^S\/P)/I_i)\,,
+    Y &= display(-i_r/(1-c_y)) dot r + display((C_0 - c_y dot T - I_0 + G)/(1-c_y)).
+  )
+$ <islm_policy_compact_system>
+
+One can express @islm_policy_compact_system in variations for clarity purposes, as a function of policy instruments: $Delta G, Delta T, "or" Delta M^S$ to have
+$
+  cases(
+    Delta r &= display(I_Y/I_i) dot Delta Y - display(1/I_i dot (Delta M^S)/(P))\,,
+    Delta Y &= display((- i_r dot r - c_y dot Delta T + Delta G)/(1-c_y)).
+  )
+$ <islm_policy_compact_system_instruments>
+
+The resulting core insight from this model can be obtained from one equation derived from @islm_policy_compact_system_instruments 
+$
+  Delta Y = 1/display(1-c_y + i_r dot I_y \/ I_i) dot (Delta G - c_y Delta T + i_r/I_i dot (Delta M^S)/P).
+$ <islm_policy_compact_system_core>
+
+=== Fisical Policy Multiplier
+
+Suppose the government conducts a fisical expansion#footnote("It can be a fiscal contraction as well. The sign does not affect the formula. So do the following formulae.") $Delta G > 0.$ How does the equilibrium $star(Y)$ change? From @islm_policy_compact_system_core, the _fiscal policy multiplier_ reads as 
+$ 
+  (Delta Y)/(Delta G) = (1)/display(1-c_y + i_r dot I_y \/ I_i),
+$ <islm_fiscal_multiplier>
+which indicates that the marginal propensity to consume $c_y$ and crowding out effects $i_r$ are key determinants.
+
+Now, suppose the government conducts a tax decrement $Delta T < 0.$ How does the equilibrium $star(Y)$ change? From @islm_policy_compact_system_core again, the _tax multiplier_ reads as
+$ 
+  (Delta Y)/(Delta G) = (-c_y)/display(1-c_y + i_r dot I_y \/ I_i),
+$ <islm_tax_multiplier>
+which is simlar to the tax multiplier, attenuated by the marginal propensity to consume $c_y.$
+
+=== Monetary Policy multiplier
+
+Suppose the central bank conducts a monetary expation $Delta M^S > 0.$ How does the equilibrium $star(Y)$ change? From @islm_policy_compact_system_core, the _monetary policy multiplier_ reads as 
+$ 
+  (Delta Y)/(Delta M^S) = (1)/display(1-c_y + i_r dot I_y \/ I_i) dot i_r/I_i dot 1/P,
+$ <islm_monetary_multiplier> which is similar to the tax multiplier, ambigously affected by $i_r.$
+
+=== Crowding Out Effect
+
+From @islm_fiscal_multiplier, the marginal propensity to consume $c_y,$ the interest sensitivity of invesement demand $i_r,$ and the slope of the LM curve $display(-I_y/I_i)$ determine the magnitude of the fiscal policy multiplier. We can see that if $i_r dot display(I_y/I_i)$ is large, the effect of the fiscal policy is reduced.
+
+When the government increases spending (fiscal expansion), it inittially raises the aggregate demand, leading to an increase in output. As a result, households and firms demand more money for transactions. This increases in money demand affects the equilibrium in the money market. In order to meet the higher demand for money, the interest rate $r$ increases because the supply of money is fixed in the short run. Hence, firms will reduce investment, and this reduction in investment partially offsets the initial increase in income caused by higher government spending. This effect is called the *crowding out effect*.
+
+Increasing aggregate demand unintendedly reduces private investment. One can think about a policy mix, in which money supply could be used to offset the crowding out effect. Consider the variations in interest rate, assuming $Delta r = 0,$ yields $ (Delta M^S)/P = I_y Delta Y. $ The _policy mix multiplier_ becomes $ Delta Y = 1/(1-c_y) Delta G $ with money supply $display((Delta M^S)/P = (I_y)/(1-c_y) dot Delta G).$
+
+= Unemployment
+
+== Walrasian Labor Market
+
+== Efficiency Wages
+
+== Generalisation
 
 // Appendix
 

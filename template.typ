@@ -224,6 +224,8 @@
 #let main_document(title: "", subtitle: "", abs: "", pref: "", content) = {
   // show math.equation: set text(font: "Libertinus Math", style: "italic")
   set text(font: "New Computer Modern")
+  show link: set text(fill: rgb(0, 0, 255))
+  show ref: set text(fill: rgb(0, 0, 255))
   show math.equation: set text(font: "New Computer Modern Math")
   show math.equation: set block(spacing: 1.9em)
   show math.equation: it => {
@@ -263,8 +265,10 @@
     leading: 1.9em,
     first-line-indent: 2em,
     justify: true,
-    linebreaks: "optimized"
+    linebreaks: "optimized",
+    // spacing: 2em
   )
+  show par: set block(spacing: 2em)
   set math.equation(
     supplement: [], 
     number-align: bottom,
@@ -303,7 +307,6 @@
   )
   show enum: set block(spacing: 1.9em)
   show heading: set block(above: 2.1em, below: 1.9em)
-  show par: set block(spacing: 2em)
   show heading.where(level: 2): it => {
     counter(math.equation).update(0)
     counter(figure.where(kind: image)).update(0)
@@ -345,8 +348,6 @@
   set page(numbering: "i")
   counter(page).update(1)
   
-  
-  
   outline(
     depth: 2,
     indent: true,
@@ -366,6 +367,8 @@
 
 #let appendix(content) = {
   set heading(numbering: "1.1.1 ", bookmarked: true)
+  show link: set text(fill: rgb(0, 0, 255))
+  show ref: set text(fill: rgb(0, 0, 255))
   show math.equation: it => {
     if it.fields().keys().contains("label") {
       math.equation(
