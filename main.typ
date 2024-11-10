@@ -4,18 +4,16 @@
   title: [
     Intermediate Macroeconomics
   ],
-  subtitle: [
-    CHANG Yung-Hsuan
-  ],
+  subtitle: [],
   abs: [
     This is a summary note of the course \"ECO_2F002_EP Intermediate Macroeconomics\" instructed by Dr. Mehdi SENOUCI and Dr. Gauthier VERMANDEL at École polytechnique in the first semester in 2024.
   ],
   pref: [
     The following content mostly follows the lecture notes provided by the instructors, but figures are mainly re-produced; there are also some personal remarks.
     
-    The last section (@ps) is about problem sets. I copied the majority of the answers as well as figures in files given by the instructors, Dr. Mehdi SENOUCI and Dr. Gauthier VERMANDEL, and the TA, PENG Lanxin.
+    The texts that are *bold* are indicating keywords, while the texts that are _italic_ are indicating new nouns. If you see a #text(fill: rgb(0, 0, 255), "blue") text, that means it is a link; you can click it and go to its place.
 
-    The texts that are *bold* are indicating keywords, while the texts that are _italic_ are indicating new nouns.
+    The last section (@ps) is about problem sets. I copied the majority of the answers as well as figures in files given by the instructors, Dr. Mehdi SENOUCI and Dr. Gauthier VERMANDEL, and the TA, PENG Lanxin.
   ]
 )
 
@@ -125,11 +123,11 @@ $
 $
 we log-differentiate and have 
 $
-  (dot(k)(t))/k(t) = (dot(K)(t))/K(t) - (dot(A)(t))/A(t) - (dot(L)(t))/L(t),$) where $display((dot(A)(t))/A(t))=g
+  (dot(k)(t))/k(t) = (dot(K)(t))/K(t) - (dot(A)(t))/A(t) - (dot(L)(t))/L(t), 
 $
-and 
+where 
 $ 
-  display((dot(L)(t))/L(t))=n
+  (dot(A)(t))/A(t)=g quad "and" quad (dot(L)(t))/L(t)=n
 $ 
 by assumption. Using @solow_dynamics_of_capital_stock, we further have 
 $ 
