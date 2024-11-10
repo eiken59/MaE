@@ -347,7 +347,9 @@
 
   set page(numbering: "i")
   counter(page).update(1)
-  
+  show outline.entry: it => {
+    text(fill: rgb(0, 0, 255), it)
+  }
   outline(
     depth: 2,
     indent: true,
