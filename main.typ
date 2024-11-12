@@ -1313,6 +1313,20 @@ Increasing aggregate demand unintendedly reduces private investment. One can thi
 
 = Unemployment
 
+_Unemployed_ are those who are not working, but able and willing to work and actively searching for job.
+
+We have classified four generes of unemployment:
++ frictional, which occurs when people are temporarily unemployed while transitioning between (*searching* for) jobs,
++ structural, which arises from a *mismatch* between workers' skills or locations and the requirements of available jobs, e.g., elevator attendants, 
++ classical (real wage), which occurs when wages are kept above the market-clearing level, often due to minimum wage laws, labor unions, or other wage-setting mechanisms (*real wage rigidities*), and
++ Keynesian (cyclical), which is caused by a decrease in aggregate demand in the economy, often during a recession.
+
+The first three comprise the natural rate $u_n$ of unemployment.
+
+In practice, the natural rate of unemployment is a theoretical concept that cannot be directly observed. However, it represents the rate of unemployment to which the economy would converge in the absence of shocks and frictions. It serves as a *benchmark*, distinguishing the cyclical fluctuations in unemployment from its long-term, structural component.
+
+// Page 3 not finished yet
+
 == Walrasian Labor Market
 
 == Efficiency Wages
