@@ -1325,13 +1325,76 @@ The first three comprise the natural rate $u_n$ of unemployment.
 
 In practice, the natural rate of unemployment is a theoretical concept that cannot be directly observed. However, it represents the rate of unemployment to which the economy would converge in the absence of shocks and frictions. It serves as a *benchmark*, distinguishing the cyclical fluctuations in unemployment from its long-term, structural component.
 
-// Page 3 not finished yet
+The two components, cyclical unemployment and structural unemployment, require distinct policy responses; the former calls for stabilization measures, while the later necessitates longer-term reforms.
 
 == Walrasian Labor Market
 
+The _Walrasian labor market_ is based on the concept of general equilibrium, where wages and employment are determined by the interactions of labor supply and labor demand. It assumes that markets are *perfectly competitive*, and wages adjust to clear the market, i.e., there is no involuntary unemployment.
+
+Since it is a perfect competitioin, workers and firms are all price-takers: no one can individually influence the wage level. In addition, wages adjust instantly to equate labor supply, and the market-clearning wage guarantees that all workers who want to work at the equilibrium wage can find employment.
+
+// I cannot read page 9 and 10. 
+
 == Efficiency Wages
 
-== Generalisation
+In fact, firms pay more than the reservation (equilibrium) wage $star(w).$ In 1914, Henry Ford introduced the five dollar day which doubles the wage. The _efficiency wage_ considerations were investigated by Raff and Summers in 1987; the increase in productivity and profits at Ford yielded less turnover.
+
+However, the macroeconomic implication of setting a wage higher than reservation wage will imply unemployment from the Walrasian view of labor markets.
+
+We start from the Walrasian labor market with inelastic labor supply. We assume that there are large numbers of firms, and they are perfectly competitive. The output is described by the production function $F$ with $ Y = F(e dot N^D), $ where $e$ is the _efficiency unit of labor_ which is *increasing in wage*, and $F$ is increasing and concave. We also assume that the demand for goods is stochastic $Y,$ allowing firms to adjust supply through inputs $e$ and $N^D.$ As we said, the labor supply is inelastic and is set to be at $overline(N)^S.$
+
+The firm chooses number of workers to hire $N$ and wage $w$ to look for 
+$
+  max_(N^D, w) F(e(w) dot N^D) - w dot N^D,
+$ <unemployment_firm>
+where $N^D in [0, overline(N)^S],$ and $w >= 0.$
+
+When we have $N^D < overline(N)^S,$ the first order conditions for @unemployment_firm are 
+$
+  F '(e(w) dot N^D) dot e(w) - w = 0 qquad "and" qquad F '(e(w) dot N^D) dot N^D dot e '(w) - N^D = 0.
+$
+Combining the two equations above, we will have 
+$
+  (w dot e '(w))/(e(w)) = 1,
+$ <unemployment_efficiency_efficiency_wage>
+in which left-hand side is called the _the elasticity of effort with respect to the wage rate_ $epsilon^e_w.$ The _efficiency wage_ $hat(w)$ is also implicitly defined by @unemployment_efficiency_efficiency_wage.
+
+In @unemployment_efficiency_efficiency_wage, the potimal condition equated the elasticity of effort with respect to the wage rate to unity. That is, firm wants to hire effective labors as cheaply as possible, which minimizes the cost per efficient unit $w\/e(w).$
+
+When $N^D = overline(N)^S,$ we just solve $ F '(e(w) dot overline(N)^S) dot e(w) - w = 0. $
+
+It can be easier to consider with some closed-form expressions. We suppose the production function is defined by
+$
+  F(e dot N^D) = (e dot N^D)^alpha,
+$ <unemployment_efficiency_production_cf>
+and the efficiency unit of labor is defined by 
+$
+  e(w) = cases((display((w-x)/(x)))^beta\, quad &"if " w >= x\,, 0\, &"if " w < x\,)
+$ <unemployment_efficiency_efficiency_cf>
+where $beta in (0, 1),$ and $x$ captures outside options. Then, we can find the reservation wage as a state-dependent relation of $N^D$ and $overline(N)^S$ with
+$
+  star(w) = cases(display((x)/(1-beta))\, quad &"if " N^D < overline(N)^S\,,
+                  x dot (1 + (display((x dot N^(1-alpha))/(alpha beta)))^(1/(beta - 1 + (alpha - 1) dot beta)))\, quad &"if " N^D < overline(N)^S\.)
+$
+
+== Generalization
+
+For the efficiency we assumed previously, there can be more things in the parameter list. For example, the average wage paid by other firms $overline(w),$ or the current level of unemployment $u.$
+
+Correspondingly, we can assume the efficiency is given by $ e(w, overline(w), u) $ with $pdiff(e, overline(w)) < 0$ and $pdiff(e, u) < 0.$ Then, each firm chooses $w$ and $N$ with taking $overline(w)$ and $u$ as given.
+
+We give an example with some closed-form expressions. Suppose the efficiency of labor is given by
+$
+  e(w) = cases((display((w-x)/(x)))^beta\, quad &"if " w >= x\,, 0\, &"if " w < x\,)
+$ <unemployment_generalization_efficiency_cf>
+where $beta in (0, 1),$ and $ x = (1 - b dot u) dot overline(w) $ stands for the worker's outside opportunities. The symbol $b$ characterizes the concern about unemployment, e.g., low skill workers may have $b>1,$ but computer scientists may have $b approx 0.$
+
+Then, @unemployment_efficiency_efficiency_wage becomes 
+$
+  beta dot ((w-x)/(x))^(beta - 1) dot 1/x dot w/((display((w-x)/(x)))^beta) = 1.
+$ <unemployment_generalization_efficiency_wage>
+Solving @unemployment_generalization_efficiency_wage, we have $ hat(w) = x/(1- beta) = (1-b u)/(1-beta) overline(w). $ This means that all firms are identical, and the wage is in equilibrium. Hence, the equilibrium (natural) unemployment rate becomes $ u_n = beta / b. $
+
 
 // Appendix
 
