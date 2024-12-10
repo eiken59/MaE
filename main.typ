@@ -1395,6 +1395,66 @@ $
 $ <unemployment_generalization_efficiency_wage>
 Solving @unemployment_generalization_efficiency_wage, we have $ hat(w) = x/(1- beta) = (1-b u)/(1-beta) overline(w). $ This means that all firms are identical, and the wage is in equilibrium. Hence, the equilibrium (natural) unemployment rate becomes $ u_n = beta / b. $
 
+= The AS-AD Model
+
+We have mentioned the IS-LM model; however, it cannot account for the supply-side shocks or explain how inflacion could coexist with high unemployment.
+
+== The AD Curve
+
+So far, we assumed that the price level $P$ is fixed. Now, we relax this assumption and let $P$ vary through a change in prices.
+
+We build the AD curve from the IS curve and the MP curve. The IS curve is built from the consumption determination from pernament income hypothesis; the MP curve is built from monetary policy decision.
+
+=== The IS Curve
+
+Consider a representative consumer with the following welfare function $ sum_(s=0)^infinity beta^s dot.c U(C_(t+s), sub(N^S, t+s)), $ <asad_is_welfare> where $beta < 1$ is the discount factor, $U$ is a typical utility function, $C_t$ is flow of consumption, and $sub(N^S, t)$ is labor supply (hours worked).
+
+We assume $ U(C, N) = log(C) - xi N, $ where $xi>0$ is the disutility of work.
+
+In addition, we have the budget constraint for each period $ P_t C_t + A_t = (1 + i_(t-1)) A_(t-1)+sub(N^S, t) tilde(W)_t, $ <asad_is_bc_original> where agents can purchase goods quantity $C_t$ at market price $P_t,$ and $A_t$ is the quantity of financial assets with interest rate $i_t,$ and $tilde(W)_t$ is the nominal wage.
+
+We express @asad_is_bc_original in real terms (divide both sides by $P_t$), having $ C_t + a_t = (1+i_(t-1))/(1+pi_t) a_(t-1) + sub(N^S, t) W_t, $ where $1+pi_t = display(P_t/P_(t-1))$ and $W_t$ is the real wage.
+
+Hence, maximizing @asad_is_welfare yields the Euler equation $ (partial U)/(partial C) (C_t) = beta dot.c (1+i_(t))/(1+pi_(t+1)) dot.c (partial U)/(partial C) (C_(t+1)), $ where the LHS is the change in consumption now, and the RHS is the change in consumption tomorrow.
+
+Considering a simplified output $ Y_t = C_t + sub(epsilon^G, t), $ where $sub(epsilon^G, t)$ is a spending shock. The IS curve is the locus of all $(Y, i-pi)$ such that consumption goods market clears for different real rates $ y_t = y_(t+1) - (i_t - pi_(t+1)) + sub(epsilon^G, t),$ where $x_t := log X_t,$ $i_t approx log(1+i_t),$ and $log beta approx -r.$
+
+Households anticipating an increase in real rate postpone consumption later and saves. Aggregate demand $y_t$ reduces in response (IS effects through consumption).
+
+=== The MP Curve
+
+The MP curve is the locus of all $(i_t, pi_t)$ such that the central bank penalizes inflation deviation from a target $pi$ with $phi$ a weight of inflation $ i_t = i + phi dot.c(pi_t - pi). $
+
+=== The AD Curve
+
+The AD curve is the combination of IS and MP, which will be $ y_t = y_(t+1) - phi dot.c (pi_t - pi) + (pi_(t+1)-pi) + sub(epsilon^G, t). $
+
+For a rise in inflation above target, central bank increases nominal rate $i$ in response. Households postpone consumption $c_t$ decreases. It cools down the economy with lower aggregate demand $y_t.$
+
+== The AS Curve
+
+Aggregate output is determined by the production function $ Y = F(N), $ where $F$ is concave, and $N$ is employment. Employment is determined by equilibrium on the labor market. Which factors affect labor demand $N^D$ and labor supply $N^S?$ Labor demand is derived from firms' profit maximization, and labor supply is derived from households' utility maximization.
+
+=== The LRAS Curve
+
+In absence of nominal rigidities and shocks, full-employment output is called the natural economy. The economy is at potential $ P^* = W_n = P_n xi Y_n, $ where $P^*$ is the optimal price. Under flexible price, $display(P^* / P_n = 1);$ hence, $y_n = -log xi.$ The LRAS curve is a vertical line that depends on structural factors only.
+
+=== The AS Curve
+
+In each period $t,$ a fixed proportion $(1-omega)$ of forms set its wage optimally; the other in proportion $omega$ grow at a rate equal to the inflation rate $ P_t = P_(t-1) dot.c (1+pi_(t-1)) dot.c (1+sub(epsilon^P, t)), $ where $sub(epsilon^P, t)$ is a supply shock.
+
+The geometric aggregation yields $ P_t = (P_(t-1) dot.c (1+pi_(t-1)) dot.c (1+sub(epsilon^P, t)))^omega dot.c (sub(P^*, t))^(1-omega). $ Take log on both sides yields $ p_t = omega dot.c (p_(t-1) + pi_(t-1) + sub(epsilon^P, t)) + (1-omega)(w_t + p_t). $
+
+Hence, the AS curve is given by $ pi_t = pi_(t-1) + (1-omega)/omega dot.c (y_t - y_n) + sub(epsilon^P, t), $ where $y_n$ is the natural market output, and the term $display((1-omega)/(omega))$ measures the degree of nominal rigidity.
+
+An economy that experiences a boom with $y_t > y_n$ will have excess labor demand. Labor market clears with an increasing real wage. Firms gradually adjust their selling prices $pi_t > pi_(t-1).$ If the economy is at potential $y_t = y_n,$ the economy is back to constant inflation.
+
+The calibration of $omega$ nests two visions of macroeconomics: $omega -> 0$ is the classical view with vertical AS curve, which considers fluctuations in the general price level $P$ should not affect $Y;$ $omega->1$ is the Keynesian view with horizonal AS curve, which considers the prices are fixed (nominal rigidity) in the short run.
+
+== The AS-AD Equilibrium
+
+Assume that the shocks only occur once, and the economy starts at full employment $pi_(t-1) = pi,$ the expectations of future period are $y_(t+1) = y_n$ and $pi_(t+1) = pi,$ we have 
+$ cases(display(y_t - y_n =  - phi dot.c (pi_t - pi) + (pi_(t+1)-pi) + sub(epsilon^G, t),), display(pi_t - pi = (1-omega)/omega dot.c (y_t - y_n) + sub(epsilon^P, t).)) $
 
 // Appendix
 
