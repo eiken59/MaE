@@ -1247,7 +1247,7 @@ $ <islm_lm_Y_r>
 
 == Equilibrium in the IS-LM model
 
-Both IS and LM are in partial equilibrium for given $r$ or $Y.$ When both goods are markets are in equilibrium, there will be a unique pair $(star(r), star(Y))$ solving the system $ cases(Y = C(Y-T) + I(r) + G\,, L(Y, r) = M^S/P\,) $ corresponds to the equilibrium in the IS-LM model. That pair is exactly the intersection of the IS and the LM curves.
+Both IS and LM are in partial equilibrium for given $r$ or $Y.$ When both goods are markets are in equilibrium, there will be a unique pair $(star(r), star(Y))$ solving the system $ cases(Y = C(Y-T) + I(r) + G\,, display(L(Y, r) = M^S/P)\,) $ corresponds to the equilibrium in the IS-LM model. That pair is exactly the intersection of the IS and the LM curves.
 
 == Policy
 
@@ -1455,6 +1455,46 @@ The calibration of $omega$ nests two visions of macroeconomics: $omega -> 0$ is 
 
 Assume that the shocks only occur once, and the economy starts at full employment $pi_(t-1) = pi,$ the expectations of future period are $y_(t+1) = y_n$ and $pi_(t+1) = pi,$ we have 
 $ cases(display(y_t - y_n =  - phi dot.c (pi_t - pi) + (pi_(t+1)-pi) + sub(epsilon^G, t),), display(pi_t - pi = (1-omega)/omega dot.c (y_t - y_n) + sub(epsilon^P, t).)) $
+
+= Open Economy
+
+So far, we focused on equilibria on the goods market (IS curve) and the money market (LM curve). In an open economy, there is a third market: the foreign exchange market (BP curve).
+
+Domestic and foreign economy are linked via two channels: trade in goods and services (current account) and trade in financial assets (capital account).
+
+== Exchange Rate
+
+We have two types of exchange rate.
+
+The _nominal exchange rate_ $e$ is the price of the domestic currency in terms of the foreign currency. A rise (fall, respectively) in $e$ is called appreciation (depreciation) of domestic currency.
+
+The _real exchange rate_ $epsilon$ measures the price of a fix basket of goods $ epsilon = (e P) / P^*, $ where $P$ is domestic price level and $P^*$ is foreign price level.
+
+== Balance of Payments
+
+As mentioned in the second paragraph in the introduction, there are two channels of transactions: current account and capital account.
+
+For the current account $"CA", $ it is account for three compoments: net exports $"NX" ,$ net income from aboard $"NI",$ and net transters from aboard $"NT".$ $ "CA" = "NX" + "NI" + "NT". $
+
+For the capital account $"KA",$ it is account for the net capital flows $"CF"$ and the net change in foreign currency reserves $Delta"FCR".$ $ "KA" = "CF" + Delta"FCR". $
+
+By construction, we have $ "CA" + "KA" = 0. $ In addition, emperically, $"NI"$ and $"NT"$ constitute little part of $"CA";$ it follows that $ "CA" = "NX", $ where the net export is defined by the difference between expenditures on exports and imports in real terms $ "NX" = "Ex" - "Im"/epsilon, $ where $"Ex"$ is positively related to foreigner's income and negatively related to $epsilon,$ and $"Im"$ is positively related to domestic imcome and positively related to $epsilon;$ that is, $ (partial"NX")/(partial star(Y)) > 0, quad (partial"NX")/(partial Y) < 0, doub "and" doub (partial"NX")/(partial epsilon) "is unclear." $
+
+From the demand side, we have $ Y = C + I + G + "NX"; $ from the supply side, we have $ Y = C + S + T. $ Hence, the equilibrium can be rewritten as $ S = I + (G - T) + "NX", $ <open_balance_private_saving> where $"BD":= G - T$ is the primary budget deficit. In @open_balance_private_saving, it suggests that domestic private saving $S$ can be lent to domestic investors $I,$ public sector $"BD",$ or foreign sector $"NX".$
+
+== Mundell-Fleming Model
+
+Since most studies show that in the medium run, the quantity effect of the decrease in $epsilon$ dominates the price effect, we shall assume that $ (partial"NX")/(partial epsilon) < 0. $ Hence, we can use a specific example of linear net export $ "NX" = "NX"_0 - m Y - a epsilon, $ where $display(m = -(partial"NX")/(partial Y))$ is the marginal propensity to import.
+
+The slope of the IS curve in the open economy is $ [diff(r, Y)]_"IS" = (1 - C_Y prime - "NX"_Y prime)/(I_r prime) < 0. $ Compare this to @islm_is_Y_r.
+
+The capital flows $"CF"$ represent financial transactions: the difference between domestic and foreign assets acquired by investors. We assume that financial assets are perfect substitutes; thus, the capital flow is positively related to the difference between exchange rates $ (partial"CF")/(partial(r - r^*)) > 0. $ This partial derivative is the mobility of capital. A specific example is liner $ "CF" = "KA" = "KA"_0 + f dot.c (r - r^*). $
+
+Now, we can construct the BP curve since we obtain two elemets about the foreign exchange market $ "BP" = "NX" + "CF" = 0. $ Hence, we can have $ overbrace("NX"_0 - m Y - a epsilon, "NX") + overbrace("KA"_0 + f dot.c (r - r^*), "CF") = 0. $ The BP curve is the locus showing all combinations of $Y$ and $r$ such that the foreign exchange market is in equilibrium. The slope of the BP curve is $ (Delta r)/(Delta Y) = m/f > 0. $
+
+= Some Limits of Monetary Policy
+
+
 
 // Appendix
 
